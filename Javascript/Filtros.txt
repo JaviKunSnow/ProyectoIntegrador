@@ -1,0 +1,5 @@
+Se puede filtrar por: 
+    -Fecha y hora
+    -Tª
+    -Humedad
+    -Nº Personas
