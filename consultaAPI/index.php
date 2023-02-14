@@ -2,6 +2,8 @@
 
 require("./config/configuracion.php");
 
+session_start();
+
 if(isset($_REQUEST["logout"])) {
     
     session_destroy();

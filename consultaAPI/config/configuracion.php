@@ -23,15 +23,15 @@ $controladores = array(
 // vistas
 $vistas = array(
     'login' => './view/loginView.php',
-    'alduino' => './view/homeView.php',
+    'alduino' => './view/alduinoView.php',
     'admin' => './view/adminView.php'
 );
 
 // estilos
-$css = array(
+/*$css = array(
     'login' => './webroot/css/loginView.css',
-    'alduino' => './view/homeView.php',
+    'alduino' => './view/alduinoView.php',
     'admin' => './view/adminView.php'
-);
+);*/
 
 ?>
