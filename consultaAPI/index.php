@@ -5,9 +5,9 @@ require("./config/configuracion.php");
 if(isset($_REQUEST["logout"])) {
     
     session_destroy();
-    $_SESSION['controlador'] = $controladores['home'];
-    $_SESSION['vista'] = $vistas['home'];
-    $_SESSION['pagina'] = 'home';
+    $_SESSION['controlador'] = $controladores['login'];
+    $_SESSION['pagina'] = 'login';
+    $_SESSION['vista'] = $vistas['login'];
     header('location: index.php');
 
 } else {
@@ -23,6 +23,6 @@ if(isset($_REQUEST["logout"])) {
     }
 }
 
-require_once('./vista/layout.php');
+require_once('./view/layout.php');
 
 ?>

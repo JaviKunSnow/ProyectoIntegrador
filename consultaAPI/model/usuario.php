@@ -2,14 +2,16 @@
 
 class Usuario {
     
-    private $id;
+    private $idUsuario;
     private $nombre;
     private $pass;
+    private $rol;
 
-    public function __construct($id, $nombre, $pass) {
-        $this->id = $id;
+    public function __construct($idUsuario, $nombre, $contraseña, $rol) {
+        $this->idUsuario = $idUsuario;
+        $this->contraseña = $contraseña;
         $this->nombre = $nombre;
-        $this->pass = $pass;
+        $this->rol = $rol;
     }
 
     public function __get($get) {

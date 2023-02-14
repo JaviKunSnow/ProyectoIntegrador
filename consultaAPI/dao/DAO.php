@@ -7,7 +7,7 @@ interface DAO {
     public static function insert($objeto);
     public static function update($objeto);
     public static function delete($objeto);
-
+    
 }
 
 ?>

@@ -3,8 +3,8 @@
 // conexion
 require_once './config/conexion.php';
 
-// controladores
-require_once './controller/loginControlador.php';
+// core
+require_once './core/funciones.php';
 
 // modelo DAO y clases
 require_once './model/usuario.php';
