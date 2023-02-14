@@ -15,7 +15,7 @@ require_once './dao/usuarioDAO.php';
 // controladores
 $controladores = array(
     'login' => './controller/loginController.php',
-    'home' => './controller/homeController.php',
+    'alduino' => './controller/alduinoController.php',
     'admin' => './controller/adminController.php'
 );
 
@@ -23,7 +23,14 @@ $controladores = array(
 // vistas
 $vistas = array(
     'login' => './view/loginView.php',
-    'home' => './view/homeView.php',
+    'alduino' => './view/homeView.php',
+    'admin' => './view/adminView.php'
+);
+
+// estilos
+$css = array(
+    'login' => './webroot/css/loginView.css',
+    'alduino' => './view/homeView.php',
     'admin' => './view/adminView.php'
 );
 
