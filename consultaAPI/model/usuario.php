@@ -3,12 +3,12 @@
 class Usuario {
     
     private $id;
-    private $usuario;
+    private $nombre;
     private $pass;
 
-    public function __construct($id, $usuario, $pass) {
-        $this->usuario = $usuario;
+    public function __construct($id, $nombre, $pass) {
         $this->id = $id;
+        $this->nombre = $nombre;
         $this->pass = $pass;
     }
 
