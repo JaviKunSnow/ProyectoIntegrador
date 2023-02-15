@@ -7,6 +7,7 @@ CREATE TABLE `sensores` (
   `fecha` datetime NOT NULL,
   `humedad` float NOT NULL,
   `temperatura` float NOT NULL,
+  `personas` int NOT NULL,
   `luminosidad` int NOT NULL,
   `idArduino` int NOT NULL,
   PRIMARY KEY (`idSensor`)

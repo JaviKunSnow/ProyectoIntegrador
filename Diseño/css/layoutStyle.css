@@ -1,9 +1,19 @@
 footer>div {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #4e9483;
+    color: white;
 }
 
-span{
+span {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    font-
+}
+
+div>header {
+    background-color: #3B7063;
+}
+
+.logout:hover{
+    border: 1px solid rgb(60, 60, 60);
+    color: white;
+    background-color: darkgray;
 }
