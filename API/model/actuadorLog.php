@@ -1,19 +1,17 @@
 <?php
 
-class Sensores {
-    private $idSensor;
+class ActuadorLog {
+    private $idActuador;
     private $fecha;
-    private $humedad;
-    private $temperatura;
-    private $luminosidad;
+    private $actuador;
+    private $causa;
     private $idArduino;
 
-    public function __construct($idSensor, $fecha, $humedad, $temperatura, $luminosidad, $idArduino){
-        $this->idSensor = $idSensor;
+    public function __construct($idActuador, $fecha, $actuador, $causa, $idArduino){
+        $this->idActuador = $idActuador;
         $this->fecha = $fecha;
-        $this->humedad = $humedad;
-        $this->temperatura = $temperatura;
-        $this->luminosidad = $luminosidad;
+        $this->actuador = $actuador;
+        $this->causa = $causa;
         $this->idArduino = $idArduino;
     }
 
