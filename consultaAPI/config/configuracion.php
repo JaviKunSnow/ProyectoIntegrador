@@ -4,6 +4,7 @@
 require_once './config/conexion.php';
 
 // core
+require_once './core/curl.php';
 require_once './core/funciones.php';
 
 // modelo DAO y clases
