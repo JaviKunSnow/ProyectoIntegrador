@@ -4,22 +4,20 @@
             "idSensor": 1,
             "fecha": "2023-02-01",
             "humedad": 80.0,
-            "temperatura": 20.2,
+            "temperatura": 2.0,
             "personas": 9,
             "luminosidad": 50,
-            "idArduino": 1 
+            "idArduino": 1
         },
-
         {
             "idSensor": 2,
             "fecha": "2023-02-02",
             "humedad": 50.0,
             "temperatura": 30.2,
             "personas": 7,
-            "luminosidad": 20,
-            "idArduino": 1 
+            "luminosidad": 10,
+            "idArduino": 2
         },
-
         {
             "idSensor": 3,
             "fecha": "2023-02-03",
@@ -27,9 +25,31 @@
             "temperatura": 10.2,
             "personas": 1,
             "luminosidad": 30,
-            "idArduino": 2 
+            "idArduino": 3
         }
+    ],
 
-
+    "actuador_log": [
+        {
+            "idActuador": 1,
+            "fecha":"2023-02-01",
+            "actuador": "Termómetro",
+            "causa": "Calor",
+            "idArduino": 1
+        },
+        {
+            "idActuador": 2,
+            "fecha":"2023-02-02",
+            "actuador": "Persiana",
+            "causa": "Poca Luz",
+            "idArduino": 2
+        },
+        {
+            "idActuador": 3,
+            "fecha":"2023-02-03",
+            "actuador": "Sensor Persona",
+            "causa": "Entró alguien",
+            "idArduino": 3
+        }
     ]
 }
