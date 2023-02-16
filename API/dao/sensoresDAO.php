@@ -65,28 +65,6 @@ class sensoresDAO extends FactoryBD implements DAO {
             return true;
         }
     }
-    
-    public static function update($obj) {
-        $sql = "update sensores set fecha = ?, humedad = ?, temperatura = ?, personas = ? where idSensor = ?;";
-        $datos = array($obj->fecha, $obj->humedad, $obj->temperatura, $obj->personas, $obj->luminosidad, $obj->idSensor);
-        $devuelve = parent::ejecuta($sql,$datos);
-        if($devuelve->rowCount() == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-    
-    public static function delete($id) {
-        $sql = "delete from sensores where idSensor = ?;";
-        $datos = array($id);
-        $devuelve = parent::ejecuta($sql,$datos);
-        if($devuelve->rowCount() == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
     // fecha, aulas, sensores, actuadores
 }
 

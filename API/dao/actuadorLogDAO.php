@@ -54,28 +54,6 @@ class actuadorLogDAO extends FactoryBD implements DAO {
             return true;
         }
     }
-    
-    public static function update($obj) {
-        $sql = "update actuador_log set fecha = ?, actuador = ?, causa = ?, idArduino = ? where idActuador = ?;";
-        $datos = array($obj->fecha, $obj->actuador, $obj->causa, $obj->idArduino, $obj->idActuador);
-        $devuelve = parent::ejecuta($sql,$datos);
-        if($devuelve->rowCount() == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-    
-    public static function delete($id) {
-        $sql = "delete from actuador_log where idActuador = ?;";
-        $datos = array($id);
-        $devuelve = parent::ejecuta($sql,$datos);
-        if($devuelve->rowCount() == 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
     // fecha, aulas, sensores, actuadores
 }
 

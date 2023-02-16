@@ -46,11 +46,12 @@ class sensoresController extends ControladorPadre {
     }
 
     public function insertar() {
-        $body = ;
+        $body = file_get_contents('php://input');
         $obj = json_decode($body);
+        $obj->fecha = date('Y-m-d H:i:s');
 
-        if(isset($obj->humedad) && isset($obj->fecha) && isset($obj->temperatura) && isset($obj->personas) && isset($obj->luminosidad) && isset($obj->$idArduino)) {
-            $sensores = new Sensores(null, $obj->fecha, $obj->humedad, $obj->temperatura, $obj->personas, $obj->luminosidad, $obj->$idArduino);
+        if(isset($obj->humedad) && isset($obj->fecha) && isset($obj->temperatura) && isset($obj->personas) && isset($obj->luminosidad) && isset($obj->idArduino)) {
+            $sensores = new Sensores(null, $obj->fecha, $obj->humedad, $obj->temperatura, $obj->personas, $obj->luminosidad, $obj->idArduino);
             if(sensoresDAO::insert($sensores)) {
                 self::respuesta('', array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
             }
