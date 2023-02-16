@@ -1,0 +1,35 @@
+{
+    "sensores": [
+        {
+            "idSensor": 1,
+            "fecha": "2023-02-01",
+            "humedad": 80.0,
+            "temperatura": 20.2,
+            "personas": 9,
+            "luminosidad": 50,
+            "idArduino": 1 
+        },
+
+        {
+            "idSensor": 2,
+            "fecha": "2023-02-02",
+            "humedad": 50.0,
+            "temperatura": 30.2,
+            "personas": 7,
+            "luminosidad": 20,
+            "idArduino": 1 
+        },
+
+        {
+            "idSensor": 3,
+            "fecha": "2023-02-03",
+            "humedad": 90.0,
+            "temperatura": 10.2,
+            "personas": 1,
+            "luminosidad": 30,
+            "idArduino": 2 
+        }
+
+
+    ]
+}

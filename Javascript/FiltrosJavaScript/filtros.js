@@ -27,8 +27,8 @@ function calcularFecha() {
             fecha = fecha.añadirDias(1)
             arrayFechas.push(fecha.toISOString().split('T')[0]);
         }
-        //arrayFechas.push(fechaFinal)
-        arrayFechas.unshift(fechaInicial.toISOString().split('T')[0]);
+
+        arrayFechas.unshift(fechaInicial.toISOString().split('T')[0]);//Añade la fecha inicial a la posicion 0 de arrayFechas
         console.log(arrayFechas);
         return arrayFechas;
 
