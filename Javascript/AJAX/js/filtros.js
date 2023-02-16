@@ -49,5 +49,14 @@ $(document).ready(function () {
     $("#botonFecha").click(calcularFecha);
 });
 
-//--------------HORAS------------------------------------------------------------------
+//--------------Crear unica fecha a partir de fecha y horas------------------------------------------------------------------
+
+
+function crearFecha(){
+    let fechaInicial = new Date(document.getElementById('fechaInicial').value); //Variable que guarda la fecha inicial introducida en el formulario
+    let dias = new Date(fechaInicial).getDate;
+    console.log(dias);
+}
+
+crearFecha();
 
