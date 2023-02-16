@@ -5,7 +5,7 @@ function calcularFecha() {
     let duracionDia = 24 * 60 * 60 * 1000; // Duracion de un dia: horas, minutos, segundos, milisegundos
     let fechaInicial = new Date(document.getElementById('fechaInicial').value); //Variable que guarda la fecha inicial introducida en el formulario
     let fechaFinal = new Date(document.getElementById('fechaFinal').value); //Variable que guarda la fecha final introducida en el formulario
-
+    //console.log(document.getElementById(typeof(('horaInicial').value)));
     //Funcion para calcular fechas entre dos fechas
     Date.prototype.añadirDias = function (days) {
         var date = new Date(this.valueOf());
@@ -51,14 +51,3 @@ $(document).ready(function () {
 
 //--------------HORAS------------------------------------------------------------------
 
-//Funcion para calcular registros entre horas
-
-function calcularHoras(){
-let horaInicio = document.getElementById('horaInicio').value
-console.log(horaInicio);
-}
-
-//Accion para el boton calcular horas
-$(document).ready(function () {
-    $("#botonHora").click(calcularHoras);
-});

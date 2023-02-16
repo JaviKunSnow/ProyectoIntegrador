@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Filtros</title>
+</head>
+
+<body>
+    <!--Formulario de filtros-->
+    <form action="formularioFiltros">
+        <!--Filtro de Fecha-->
+        <div class="mb-3" id='divFecha'>
+            <!--Input de FechaInicial-->
+            <label for="fechaInicial" class="form-label"><b>Fecha Inicial: </b></label>
+            <input type="date" class="form-control" name="fechaInicial" id="fechaInicial" required>
+            <br />
+            <!--Input de FechaFinal-->
+            <label for="fechaFinal" class="form-label"><b>Fecha Final: </b></label>
+            <input type="date" class="form-control" name="fechaFinal" id="fechaFinal">
+
+            <!--Boton para calcular fechas
+            <button type="submit" class="btn btn-primary" value="Calcular Fechas" id="botonFecha">Calcular Fechas</button>-->
+        </div>
+
+        <!--Filtro de horas-->
+        <div class="mb-3">
+            <label for="horaInicio" class="form-label"><b> Hora Inicio: </b></label>
+            <input type="time" class="form-control" name="horaInicio" id="horaInicio" min="00:00" max="23:59" required>
+
+            <label for="horaFinal" class="form-label"><b>Hora Final: </b></label>
+            <input type="time" class="form-control" name="horaFinal" id="horaFinal" min="00:00" max="23:59">
+        </div>
+
+        <!--Filtro de Tª-->
+        <div class="mb-3">
+            <label for="temperatura" class="form-label"><b> Temperatura: </b></label>
+            <input type="number" class="form-control" name="temperatura" id="temperatura">
+        </div>
+
+
+        <!--Filtro de Humedad-->
+        <div class="mb-3">
+            <label for="humedad" class="form-label"><b> Humedad: </b></label>
+            <input type="number" class="form-control" name="humedad" id="humedad">
+        </div>
+
+        <!--Filtro de Humedad-->
+        <div class="mb-3">
+            <label for="luminosidad" class="form-label"><b> Luminosidad </b></label>
+            <input type="number" class="form-control" name="luminosidad" id="luminosidad">
+        </div>
+
+        <button type="submit" class="btn btn-primary" value="Calcular Fechas" id="botonFecha">Calcular Fechas</button>
+    </form>
+    <script src="js/filtros.js"></script>
+</body>
+
+</html>
