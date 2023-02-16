@@ -46,7 +46,7 @@ class sensoresController extends ControladorPadre {
     }
 
     public function insertar() {
-        $body = $_GET;
+        $body = ;
         $obj = json_decode($body);
 
         if(isset($obj->humedad) && isset($obj->fecha) && isset($obj->temperatura) && isset($obj->personas) && isset($obj->luminosidad) && isset($obj->$idArduino)) {
