@@ -11,7 +11,19 @@ class sensoresDAO extends FactoryBD implements DAO {
     }
 
     public static function findById($id) {
-        $sql = "select * from sensores where idSensor= ? ;";
+        $sql = "select * from sensores where idSensor = ? ;";
+        $datos = array($id);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $obj = $devuelve->fetch(PDO::FETCH_ASSOC);
+        if($obj){
+            return $obj;
+        } else {
+            return null;
+        }
+    }
+
+    public static function findByIdArduino($id) {
+        $sql = "select * from sensores where idArduino = ? ;";
         $datos = array($id);
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetch(PDO::FETCH_ASSOC);
@@ -30,8 +42,16 @@ class sensoresDAO extends FactoryBD implements DAO {
         return $arraySensores;
     }
 
+    public static function findBetweenDate($date1, $date2) {
+        $sql = "select * from sensores where fecha between ? and ?;";
+        $datos = array($date1, $date2);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
+        return $arraySensores;
+    }
+
     public static function insert($objeto) {
-        $sql = "insert into sensores values (?,?,?,?,?,?)";
+        $sql = "insert into sensores values (?,?,?,?,?,?,?)";
         $objeto = (array)$objeto;
         $datos = array();
         foreach($objeto as $obj){
@@ -47,8 +67,8 @@ class sensoresDAO extends FactoryBD implements DAO {
     }
     
     public static function update($obj) {
-        $sql = "update sensores set grupo = ?, fecha = ?, precio = ?, lugar = ? where id = ?;";
-        $datos = array($obj->fecha, $obj->humedad, $obj->temperatura, $obj->luminosidad, $obj->id);
+        $sql = "update sensores set fecha = ?, humedad = ?, temperatura = ?, personas = ? where idSensor = ?;";
+        $datos = array($obj->fecha, $obj->humedad, $obj->temperatura, $obj->personas, $obj->luminosidad, $obj->idSensor);
         $devuelve = parent::ejecuta($sql,$datos);
         if($devuelve->rowCount() == 0) {
             return false;
@@ -58,7 +78,7 @@ class sensoresDAO extends FactoryBD implements DAO {
     }
     
     public static function delete($id) {
-        $sql = "delete from sensores where id = ?;";
+        $sql = "delete from sensores where idSensor = ?;";
         $datos = array($id);
         $devuelve = parent::ejecuta($sql,$datos);
         if($devuelve->rowCount() == 0) {

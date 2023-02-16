@@ -30,6 +30,15 @@ class actuadorLogDAO extends FactoryBD implements DAO {
         return $arraySensores;
     }
 
+    public static function findBetweenDate($date1, $date2) {
+        $sql = "select * from actuador_log where fecha between ? and ?;";
+        $datos = array($date1, $date2);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
+        return $arraySensores;
+    }
+
+
     public static function insert($objeto) {
         $sql = "insert into actuador_log values (?,?,?,?,?)";
         $objeto = (array)$objeto;
@@ -47,7 +56,7 @@ class actuadorLogDAO extends FactoryBD implements DAO {
     }
     
     public static function update($obj) {
-        $sql = "update actuador_log set grupo = ?, fecha = ?, precio = ?, lugar = ? where id = ?;";
+        $sql = "update actuador_log set fecha = ?, actuador = ?, causa = ?, idArduino = ? where idActuador = ?;";
         $datos = array($obj->fecha, $obj->actuador, $obj->causa, $obj->idArduino, $obj->idActuador);
         $devuelve = parent::ejecuta($sql,$datos);
         if($devuelve->rowCount() == 0) {
@@ -58,7 +67,7 @@ class actuadorLogDAO extends FactoryBD implements DAO {
     }
     
     public static function delete($id) {
-        $sql = "delete from actuador_log where id = ?;";
+        $sql = "delete from actuador_log where idActuador = ?;";
         $datos = array($id);
         $devuelve = parent::ejecuta($sql,$datos);
         if($devuelve->rowCount() == 0) {

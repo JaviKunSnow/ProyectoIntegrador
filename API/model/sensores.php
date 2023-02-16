@@ -5,14 +5,16 @@ class Sensores {
     private $fecha;
     private $humedad;
     private $temperatura;
+    private $personas;
     private $luminosidad;
     private $idArduino;
 
-    public function __construct($idSensor, $fecha, $humedad, $temperatura, $luminosidad, $idArduino){
+    public function __construct($idSensor, $fecha, $humedad, $temperatura, $personas, $luminosidad, $idArduino){
         $this->idSensor = $idSensor;
         $this->fecha = $fecha;
         $this->humedad = $humedad;
         $this->temperatura = $temperatura;
+        $this->personas = $personas;
         $this->luminosidad = $luminosidad;
         $this->idArduino = $idArduino;
     }

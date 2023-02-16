@@ -1,5 +1,5 @@
 <?php
-/*
+
 require_once './config/configuracion.php';
 
 $recurso = ControladorPadre::recurso();
@@ -11,4 +11,4 @@ if($recurso) {
         $controlador = new actuadorLogController();
         $controlador->controlar();
     }
-} */
+} 

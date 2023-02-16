@@ -22,3 +22,10 @@ CREATE TABLE `actuador_log` (
   `idArduino` int DEFAULT NULL,
   PRIMARY KEY (`idActuador`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+insert into actuador_log values(null, '2023-03-01', "temp",'el tiempo', 1);
+insert into actuador_log values(null, '2023-03-01', "temp",'el tiempo', 1);
+
+insert into sensores values(null, '2023-03-01', 30.4 , 10.4, 5, 300, 2);
+insert into sensores values(null, '2023-03-01', 30.4 , 10.4, 5, 300, 2);
