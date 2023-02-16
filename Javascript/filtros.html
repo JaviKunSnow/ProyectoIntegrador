@@ -23,14 +23,20 @@
             <!--Input de FechaFinal-->
             <label for="fechaFinal" class="form-label"><b>Fecha Final: </b></label>
             <input type="date" class="form-control" name="fechaFinal" id="fechaFinal">
+
+            <!--Boton para calcular fechas-->
+            <button type="submit" class="btn btn-primary" value="Calcular Fechas" id="botonFecha">Calcular Fechas</button>
         </div>    
         <!--Filtro de horas-->
         <div class="mb-3">
-            <label for="filtroHoraInicio" class="form-label"><b> Hora Inicio: </b></label>
-            <input type="time" class="form-control" name="filtroHoraInicio" id="filtroHoraInicio" min="00:00" max="23:59" required>
+            <label for="horaInicio" class="form-label"><b> Hora Inicio: </b></label>
+            <input type="time" class="form-control" name="horaInicio" id="horaInicio" min="00:00" max="23:59" required>
 
-            <label for="filtroHoraFinal" class="form-label"><b>Hora Final: </b></label>
-            <input type="time" class="form-control" name="filtroHoraFinal" id="filtroHoraFinal" min="00:00" max="23:59">
+            <label for="horaFinal" class="form-label"><b>Hora Final: </b></label>
+            <input type="time" class="form-control" name="horaFinal" id="horaFinal" min="00:00" max="23:59">
+
+              <!--Boton para calcular horas-->
+              <button type="submit" class="btn btn-primary" value="Calcular Horas" id="botonHora">Calcular Hora</button>
         </div>
 
 
