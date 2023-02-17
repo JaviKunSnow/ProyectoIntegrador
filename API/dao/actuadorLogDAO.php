@@ -10,18 +10,6 @@ class actuadorLogDAO extends FactoryBD implements DAO {
         return $arraySensores;
     }
 
-    public static function findById($id) {
-        $sql = "select * from actuador_log where idActuador = ?;";
-        $datos = array($id);
-        $devuelve = parent::ejecuta($sql,$datos);
-        $obj = $devuelve->fetch(PDO::FETCH_ASSOC);
-        if($obj){
-            return $obj;
-        } else {
-            return null;
-        }
-    }
-
     public static function findByDate($date) {
         $sql = "select * from actuador_log where fecha = ?;";
         $datos = array($date);

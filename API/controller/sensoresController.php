@@ -36,15 +36,15 @@ class sensoresController extends ControladorPadre {
                 self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
             } else {
-                if(isset($_GET["fecha"]) && count($_GET) == 1) {
+                if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
 
-                    $sensores = sensoresDAO::findByDate($_GET['fecha']);
+                    $sensores = sensoresDAO::findDatosSensor($_GET["datos"], $_GET["fecha1"], $_GET["fecha2"]);
                     $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
-                }  else if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 2) {
+                } else if(isset($_GET["datos"]) && isset($_GET["id"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
 
-                    $sensores = sensoresDAO::findBetweenDate($_GET["fecha1"], $_GET["fecha2"]);
+                    $sensores = sensoresDAO::findDatosSensor($_GET["datos"], $_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
                     $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
@@ -59,10 +59,6 @@ class sensoresController extends ControladorPadre {
                 }
                 // busqueda de fecha y hora: separarla usando un split, diviendo los datos en 2 arrays para los filtros.
             }
-        } else if(count($recurso) == 3) {
-            $sensores = sensoresDAO::findById($recurso[2]);
-            $data = json_encode($sensores);
-            self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
         }
     }
 
