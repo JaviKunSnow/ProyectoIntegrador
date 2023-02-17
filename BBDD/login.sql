@@ -1,4 +1,4 @@
- CREATE DATABASE login;
+CREATE DATABASE login;
 USE login;
 
 DROP TABLE IF EXISTS `arduino`;

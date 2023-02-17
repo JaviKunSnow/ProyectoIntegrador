@@ -1,16 +1,26 @@
 CREATE DATABASE api;
 USE api;
 
+DROP TABLE IF EXISTS `arduino`;
+CREATE TABLE `arduino` (
+  `idArduino` int NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  PRIMARY KEY (`idArduino`),
+  UNIQUE KEY `nombre_UNIQUE` (`nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 DROP TABLE IF EXISTS `sensores`;
 CREATE TABLE `sensores` (
   `idSensor` int NOT NULL AUTO_INCREMENT,
   `fecha` datetime NOT NULL,
   `humedad` float NOT NULL,
   `temperatura` float NOT NULL,
-  `personas` int NOT NULL,
   `luminosidad` int NOT NULL,
+  `personas` int NOT NULL,
   `idArduino` int NOT NULL,
-  PRIMARY KEY (`idSensor`)
+  PRIMARY KEY (`idSensor`),
+  KEY `idArduino_idx` (`idArduino`),
+  CONSTRAINT `idArduino` FOREIGN KEY (`idArduino`) REFERENCES `arduino` (`idArduino`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 DROP TABLE IF EXISTS `actuador_log`;
@@ -20,21 +30,7 @@ CREATE TABLE `actuador_log` (
   `actuador` varchar(50) DEFAULT NULL,
   `causa` varchar(200) DEFAULT NULL,
   `idArduino` int DEFAULT NULL,
-  PRIMARY KEY (`idActuador`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-
-insert into actuador_log values(null, '2023-03-01', "temp",'el tiempo', 1);
-insert into actuador_log values(null, '2023-03-01', "temp",'el tiempo', 1);
-
-insert into sensores values(null, '2023-03-01', 30.4 , 10.4, 5, 300, 2);
-insert into sensores values(null, '2023-03-01', 30.4 , 10.4, 5, 300, 2);
-
--- duplicar aqui tabla
-DROP TABLE IF EXISTS `arduino`;
-CREATE TABLE `arduino` (
-  `idArduino` int NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  PRIMARY KEY (`idArduino`),
-  UNIQUE KEY `nombre_UNIQUE` (`nombre`)
+  PRIMARY KEY (`idActuador`),
+  KEY `idArduino_idx` (`idArduino`),
+  CONSTRAINT `idArduinoAct` FOREIGN KEY (`idArduino`) REFERENCES `arduino` (`idArduino`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
