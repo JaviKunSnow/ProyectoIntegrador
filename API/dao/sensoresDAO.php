@@ -26,7 +26,7 @@ class sensoresDAO extends FactoryBD implements DAO {
         $sql = "select * from sensores where idArduino = ? ;";
         $datos = array($id);
         $devuelve = parent::ejecuta($sql,$datos);
-        $obj = $devuelve->fetch(PDO::FETCH_ASSOC);
+        $obj = $devuelve->fetchAll(PDO::FETCH_ASSOC);
         if($obj){
             return $obj;
         } else {
@@ -35,7 +35,7 @@ class sensoresDAO extends FactoryBD implements DAO {
     }
 
     public static function findByDate($date) {
-        $sql = "select * from sensores where fecha = ?;";
+        $sql = "select * from sensores where fecha like ?;";
         $datos = array($date);
         $devuelve = parent::ejecuta($sql,$datos);
         $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
