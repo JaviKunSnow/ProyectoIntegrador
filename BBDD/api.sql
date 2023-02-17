@@ -29,3 +29,12 @@ insert into actuador_log values(null, '2023-03-01', "temp",'el tiempo', 1);
 
 insert into sensores values(null, '2023-03-01', 30.4 , 10.4, 5, 300, 2);
 insert into sensores values(null, '2023-03-01', 30.4 , 10.4, 5, 300, 2);
+
+-- duplicar aqui tabla
+DROP TABLE IF EXISTS `arduino`;
+CREATE TABLE `arduino` (
+  `idArduino` int NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  PRIMARY KEY (`idArduino`),
+  UNIQUE KEY `nombre_UNIQUE` (`nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -3,7 +3,7 @@ USE login;
 
 DROP TABLE IF EXISTS `arduino`;
 CREATE TABLE `arduino` (
-  `idArduino` int NOT NULL AUTO_INCREMENT,
+  `idArduino` int NOT NULL,
   `nombre` varchar(45) NOT NULL,
   PRIMARY KEY (`idArduino`),
   UNIQUE KEY `nombre_UNIQUE` (`nombre`)
