@@ -1,7 +1,8 @@
 $.ajax({
     type: "GET",
-    url: `${SERVERSENSORES}?fecha1=${fecha} ${hora}`,
+    url: `${SERVERSENSORES}?fecha1=${fecha} ${hora}&fecha2=${fecha2} ${hora2}`,
     dataType: "application/json",
+    
     success: function (json) {
         $('<h1/>').text(json.title).appendTo('body');
         $('<div class="content"/>')
