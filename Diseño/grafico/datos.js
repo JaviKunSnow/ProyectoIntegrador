@@ -20,3 +20,5 @@ const data = {
     borderColor: 'rgb(153, 102, 255)'
   }]
 };
+
+// https://www.chartjs.org/docs/latest/charts/line.html#line-chart
