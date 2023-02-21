@@ -21,6 +21,22 @@ class arduinoDAO extends FactoryBD implements DAO {
             return null;
         }
     }
+
+    public static function insert($objeto) {
+        $sql = "insert into arduino values (?,?)";
+        $objeto = (array)$objeto;
+        $datos = array();
+        foreach($objeto as $obj){
+            array_push($datos, $obj);
+        }
+        $datos[0] = null;
+        $devuelve = parent::ejecuta($sql,$datos);
+        if($devuelve->rowCount() == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     
 }
 
