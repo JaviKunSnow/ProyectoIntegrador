@@ -6,7 +6,7 @@ Class FactoryBD {
 
         try {
 
-            $con = new PDO("mysql:host=".HOST.";dbname=".BBDD, USER, PASS);
+            $con = new PDO("mysql:host=".$_SERVER["SERVER_ADDR"].";dbname=".BBDD, USER, PASS);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $preparada = $con->prepare($sql);
             $preparada->execute($datos);

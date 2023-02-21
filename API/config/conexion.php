@@ -1,6 +1,5 @@
 <?php
 
-define('HOST', '192.168.2.206');
 define('USER', 'proyecto');
 define('PASS', 'proyecto');
 define('BBDD', 'api');
