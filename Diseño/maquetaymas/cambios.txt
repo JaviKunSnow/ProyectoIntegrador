@@ -15,3 +15,5 @@ Que la vista de plantas tenga un 3x2 en las bolitas si la vista es cuadrada.
 GENERAL:
 
 Hacer versiones de moviles y para vistas cuadradas.
+
+Cuando se vean las tablas en una pantalla móvil, se veran la id y la fecha y si pulsas se abre un menu desplegable con el resto de los datos. 
