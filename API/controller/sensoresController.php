@@ -1,7 +1,7 @@
 <?php
 
 class sensoresController extends ControladorPadre {
-    // funcion de controlar, que recibe el metodo y llama a la respectiva funcion en el switch
+    // funcion de controlar, que recibe el metodo y llama a la respectiva funcion en el switch.
     public function controlar()
     {
         $metodo = $_SERVER['REQUEST_METHOD'];
@@ -76,7 +76,7 @@ class sensoresController extends ControladorPadre {
         // le pongo al objeto la clave fecha y el valor la fecha del dia de hoy con su respectiva hora.
         $obj->fecha = date('Y-m-d H:i:s');
 
-        // compruebo que los valores no estan vacios y creo un objeto de Sensores con ellos
+        // compruebo que los valores no estan vacios y creo un objeto de Sensores con ellos.
         if(isset($obj->humedad) && isset($obj->fecha) && isset($obj->temperatura) && isset($obj->personas) && isset($obj->luminosidad) && isset($obj->idArduino)) {
             $sensores = new sensores(null, $obj->fecha, $obj->humedad, $obj->temperatura, $obj->personas, $obj->luminosidad, $obj->idArduino);
             // procedo a intentar insertar los valores en la BD, si todo ha salido con exito devuelvo un codigo 200 y si sale mal devuelvo la razon del error.
