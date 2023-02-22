@@ -10,10 +10,12 @@ vista admin:
 
 Hacer en una vista separada los graficos y tablas como pasa en los usuarios.
 Que la vista de plantas tenga un 3x2 en las bolitas si la vista es cuadrada.
+cambiar el "apagado/encendido" de los actuadores por los nombres de cada uno
 
 
 GENERAL:
 
 Hacer versiones de moviles y para vistas cuadradas.
 
-Cuando se vean las tablas en una pantalla móvil, se veran la id y la fecha y si pulsas se abre un menu desplegable con el resto de los datos. 
+Cuando se vean las tablas en una pantalla móvil, se veran la id y la fecha y si pulsas se abre un menu desplegable con el resto de los datos.
+https://www.expansion.com/mercados/cotizaciones/indices/ibex35_I.IB.html#noticias
