@@ -38,14 +38,30 @@ class actuadorLogController extends ControladorPadre {
 
             } else {
                 
-                if(isset($_GET["fecha"]) && count($_GET) == 2) {
+                if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
 
-                    $sensores = actuadorLogDAO::findByDate($_GET['fecha']);
-                    $data = json_encode($sensores);
+                    // llamo al dao de datosActuador para buscar los datos del actuador entre 2 fechas y recojo los datos.
+                    $actuador = actuadorLogDAO::findDatosActuador($_GET["datos"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($actuador);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 4 y si no estan vacios los datos que recojemos.
+                } else if(isset($_GET["datos"]) && isset($_GET["id"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
+
+                    // llamo al dao de datosActuadorByIdArduino para buscar los datos del actuador entre 2 fechas y por la id del arduino y recojo los datos.
+                    $actuador = actuadorLogDAO::findDatosActuadorbyIdArduino($_GET["datos"], $_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($actuador);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // recojo los datos de la clase, que sera la id del arduino.
+                } else if(isset($_GET["clase"]) && count($_GET) == 1) {
+
+                    // recojo y envio los datos de la clase correspondiente por la id que le hemos pasado.
+                    $actuador = actuadorLogDAO::findByIdArduino($_GET['clase']);
+                    $data = json_encode($actuador);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
                 }
-
             }
         }
     }
