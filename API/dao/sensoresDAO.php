@@ -38,6 +38,32 @@ class sensoresDAO extends FactoryBD implements DAO {
         return $arraySensores;
     }
 
+    public static function findDatosByLastWeek() {
+        $sql = "SELECT DATE(fecha) AS fecha, AVG(humedad) AS humedad_media, AVG(temperatura) AS temperatura_media, AVG(luminosidad) AS luminosidad_media, AVG(personas) AS personas_media FROM sensores WHERE fecha >= DATE_SUB(NOW(), INTERVAL 2 WEEK) GROUP BY DATE(fecha)";
+        $datos = [];
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
+        $datosSemana = array();
+        foreach($arraySensores as $fila) {
+            $fecha_medicion = new DateTime($fila['fecha']);
+            $numero_semana_medicion = $fecha_medicion->format('W');
+            $fecha_actual = new DateTime();
+            $numero_semana_actual = $fecha_actual->format('W');
+            $diferencia_semanas = $numero_semana_actual - $numero_semana_medicion;
+            if ($diferencia_semanas == 1 || ($diferencia_semanas == 0 && $fecha_medicion->format('N') > $fecha_actual->format('N'))) {
+                $objeto = new stdClass();
+                $objeto->fecha = $fila['fecha'];
+                $objeto->humedad_media = $fila['humedad_media'];
+                $objeto->temperatura_media = $fila['temperatura_media'];
+                $objeto->luminosidad_media = $fila['luminosidad_media'];
+                $objeto->personas_media = $fila['personas_media'];
+                $datosSemana[] = $objeto;
+            }
+        }
+
+        return $datosSemana;
+    }
+
     public static function insert($objeto) {
         $sql = "insert into sensores values (?,?,?,?,?,?,?)";
         $objeto = (array)$objeto;

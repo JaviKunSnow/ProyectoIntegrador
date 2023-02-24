@@ -40,24 +40,28 @@ const ctx = document.getElementById("grafico");
 console.log(datos);*/
 
 window.addEventListener("load", async () => {
-
-  const sensores = await datos();
-
   document.getElementById("boton").addEventListener("click", async (e) => {
     e.preventDefault();
 
+    const sensores = await datos();
+
     const humedad = [];
     const temperatura = [];
-    const personas = []
-
-    for await(object of sensores) {
-      humedad.push(object.humedad);
-      temperatura.push(object.temperatura);
-      personas.push(object.personas);
+    const luminosidad = []
+    const personas = [];
+    
+    console.log(typeof sensores);
+    console.log(Array.isArray(sensores));
+    for await(objeto of sensores) {
+      humedad.push(objeto.humedad_media);
+      temperatura.push(objeto.temperatura_media);
+      luminosidad.push(objeto.luminosidad_media);
+      personas.push(objeto.personas_media);
     }
+  
 
     
-    const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const labels = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
     const data = {
       labels: labels,
       datasets: [{
@@ -72,6 +76,12 @@ window.addEventListener("load", async () => {
         fill: false,
         borderColor: 'rgb(75, 192, 192)'
       },
+      /*{
+        label: 'Luminosidad',
+        data: luminosidad,
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)'
+      },*/
       {
         label: 'Personas',
         data: personas,
@@ -91,7 +101,7 @@ window.addEventListener("load", async () => {
 })
 
 async function datos() { 
-  const datos = await fetch(`${SERVER}/sensores`, {
+  const datos = await fetch(`${SERVER}/sensores?grafico=semana`, {
     method: 'GET',
     headers: {
       'content-type': 'application/json'

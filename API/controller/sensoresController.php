@@ -61,6 +61,13 @@ class sensoresController extends ControladorPadre {
                     $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
+                } else if(isset($_GET["grafico"]) && $_GET["grafico"] == "semana" && count($_GET) == 1) {
+
+                    // recojo y envio los datos de la clase correspondiente por la id que le hemos pasado.
+                    $sensores = sensoresDAO::findDatosByLastWeek();
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
                 } else {
                     self::respuesta('',array('HTTP/1.1 404 No se ha utilizado el filtro correcto'));
                 }
