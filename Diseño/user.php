@@ -85,7 +85,13 @@
                     <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <span class="mt-2" id="personasSpan">10</span>
                         <button class="btn btn-primary rounded-circle mt-2 circulo" id="personas">
+                            <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
+                            <!-- mas de 10 personas -->
                             <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                            <!-- de 5 a 10 personas -->
+                            <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
+                            <!-- de 0 a 5 personas  -->
+                            <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
                         </button>
                     </div>
                 </div>
