@@ -1,5 +1,16 @@
 .usuario {
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 50px;
+    font-family: 'Orbitron', serif;
+    color: #3b705d;
+}
+
+.circle {
+    width: 350px;
+    height: 350px;
 }
 
 .circulo {
@@ -13,6 +24,10 @@ span {
     font-weight: bold;
     color: #6c6c6b;
     font-size: x-large;
+}
+
+.sensorIcon {
+    width: 130px;
 }
 
 #temperaturaSpan {
@@ -80,4 +95,9 @@ span {
 
 #personas:hover {
     background-color: #e09cb3;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(100%);
 }

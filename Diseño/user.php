@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/userStyle.css">
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
-    <title>Layout</title>
+    <title>Vista principal - user</title>
 </head>
 
 <body>
@@ -31,25 +31,71 @@
         </div>
     </header>
     <main>
-        <div class="usuario d-flex justify-content-center align-items-center">
-            <div class="d-flex flex-column align-items-center">
-                <span class="mt-2" id="temperaturaSpan">25 º</span>
-                <button class="btn btn-primary rounded-circle mt-2 mx-5 circulo" id="temperatura">
-
-                </button>
+        <div class="usuario d-none d-sm-none d-md-block d-lg-block">
+            <h2 class="text-center">Aula 165</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="circle d-flex flex-column align-items-center mx-0 mx-lg-4 col-md-4">
+                    <span class="mt-2" id="temperaturaSpan">25 º</span>
+                    <button class="btn btn-primary rounded-circle mx-0 mx-lg-5 mt-2 circulo" id="temperatura">
+                        <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
+                    </button>
+                </div>
+                <div class="circle d-flex flex-column align-items-center mx-0 mx-lg-4 col-md-4">
+                    <span class="mt-2" id="humedadSpan">100%</span>
+                    <button class="btn btn-primary rounded-circle mx-0 mx-lg-5 mt-2 circulo" id="humedad">
+                        <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
+                    </button>
+                </div>
+                <div class="circle d-flex flex-column align-items-center mx-0 mx-lg-4 col-md-4">
+                    <span class="mt-2" id="personasSpan">10</span>
+                    <button class="btn btn-primary rounded-circle mx-0 mx-lg-5 mt-2 circulo" id="personas">
+                        <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
+                        <!-- mas de 10 personas -->
+                        <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                        <!-- de 5 a 10 personas -->
+                        <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
+                        <!-- de 0 a 5 personas  -->
+                        <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                    </button>
+                </div>
             </div>
-            <div class="d-flex flex-column align-items-center">
-                <span class="mt-2" id="humedadSpan">100%</span>
-                <button class="btn btn-primary rounded-circle mt-2 mx-5 circulo" id="humedad">
+        </div>
 
-                </button>
+        <div id="myCarousel" class="carousel slide d-block d-sm-block d-md-none d-lg-none mt-5 pt-4" data-ride="#e33c13">
+            <div class="carousel-inner">
+                <div class="carousel-item active ms-3 ps-2">
+                    <div class="circle d-flex flex-column align-items-center">
+                        <span class="mt-2" id="temperaturaSpan">25 º</span>
+                        <button class="btn btn-primary rounded-circle mt-2 circulo" id="temperatura">
+                            <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item ms-3 ps-2">
+                    <div class="circle d-flex flex-column align-items-center">
+                        <span class="mt-2" id="humedadSpan">100%</span>
+                        <button class="btn btn-primary rounded-circle mt-2 circulo" id="humedad">
+                            <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item ms-3 ps-2">
+                    <div class="circle d-flex flex-column align-items-center">
+                        <span class="mt-2" id="personasSpan">10</span>
+                        <button class="btn btn-primary rounded-circle mt-2 circulo" id="personas">
+                            <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="d-flex flex-column align-items-center">
-                <span class="mt-2" id="personasSpan">10</span>
-                <button class="btn btn-primary rounded-circle mt-2 mx-5 circulo" id="personas">
-
-                </button>
-            </div>
+            <button class="carousel-control-prev btn btn-success" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next btn btn-success" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
     </main>
     <footer class="bg-light text-center text-lg-start fixed-bottom">
