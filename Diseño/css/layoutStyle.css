@@ -1,7 +1,13 @@
-footer>div {
-    background-color: #4e9078;
-    color: white;
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+main {
+    margin-bottom: 70px;
+}
+
 
 header {
     /* border-bottom: 2px #3b705d solid; */
@@ -26,6 +32,7 @@ header {
     text-align: right;
 }
 
-main {
-    margin-bottom: 70px;
+footer>div {
+    background-color: #4e9078;
+    color: white;
 }
