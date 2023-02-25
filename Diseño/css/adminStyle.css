@@ -1,3 +1,11 @@
+a {
+    text-decoration: none;
+}
+
+.usuario {
+    margin-top: 90px;
+}
+
 .circle {
     width: 250px;
     height: 250px;
@@ -30,12 +38,14 @@
 }
 
 .btn-circle:hover {
-    background-color: #e09cb3;
+    background-color: #6c6c6b;
+    color: white;
 }
 
 h4,
 p {
     font-family: 'Orbitron', serif;
+    font-weight: bold;
 }
 
 h2,
