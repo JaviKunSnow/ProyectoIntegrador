@@ -25,3 +25,7 @@ header {
     font-family: 'Tumbly', serif;
     text-align: right;
 }
+
+main {
+    margin-bottom: 70px;
+}

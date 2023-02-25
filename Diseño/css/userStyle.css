@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+main {
+    margin-bottom: 70px;
+}
+
 .usuario {
     margin-top: 50px;
 }
@@ -81,19 +85,27 @@ span {
 .actuadorIcon {
     width: 35px;
     margin: 5px;
+}
+
+.actuadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
     transition: transform 0.2s;
 }
 
-.actuadorIcon:hover {
+.actuadores:hover {
     transform: scale(1.1);
 }
 
 .apagado {
     background-color: #8edd8b;
-    color: black;
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .apagado:hover {
@@ -102,10 +114,6 @@ span {
 
 .encendido {
     background-color: #f8ad96;
-    color: black;
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .encendido:hover {
