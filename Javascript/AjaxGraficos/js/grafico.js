@@ -10,7 +10,7 @@ const personas = [];
 /*$(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "http://192.168.1.110/ProyectoIntegrador/API/api.php/sensores",
+        url: "http://192.168.1.110/Integrador/API/api.php/sensores",
         dataType: "application/json",
         success: function (response) {
             datos = response;
