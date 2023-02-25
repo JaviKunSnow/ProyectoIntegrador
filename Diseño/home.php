@@ -3,13 +3,12 @@
 <link rel="stylesheet" href="css/homeStyle.css">
 <link rel="stylesheet" href="css/tipografia.css">
 
-
 <div class="container pt-5 mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-lg-4">
             <div class="card p-2">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Iniciar sesión</h5>
+                    <h5 class="card-title text-center py-2">Iniciar sesión</h5>
                     <form>
                         <div class="mb-3">
                             <label for="username" class="form-label">Nombre de usuario</label>
