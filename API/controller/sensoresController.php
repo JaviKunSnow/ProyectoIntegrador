@@ -61,10 +61,19 @@ class sensoresController extends ControladorPadre {
                     $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
+                // pregunto si el valor de get no esta vacio y pregunto si ese valor es "semana".
                 } else if(isset($_GET["grafico"]) && $_GET["grafico"] == "semana" && count($_GET) == 1) {
 
-                    // recojo y envio los datos de la clase correspondiente por la id que le hemos pasado.
+                    // recojo y envio la media de cada dato correspondiente.
                     $sensores = sensoresDAO::findDatosByLastWeek();
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // pregunto si el valor de get no esta vacio y pregunto si ese valor es "mes".
+                } else if(isset($_GET["grafico"]) && $_GET["grafico"] == "mes" && count($_GET) == 1) {
+
+                    // recojo y envio la media de cada dato correspondiente.
+                    $sensores = sensoresDAO::findDatosByLastMonth();
                     $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
