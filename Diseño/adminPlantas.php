@@ -13,6 +13,27 @@
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
     <title>Vista principal Plantas- admin</title>
+    <style>
+        .container {
+            display: flex;
+            overflow-x: scroll;
+            padding: 24px;
+            width: 300px;
+            height: 360px;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 24px;
+            border-radius: 8px;
+            gap: 12px;
+            margin: 2rem auto;
+        }
+
+        .container .item {
+            flex: 0 0 100%;
+            padding: 24px;
+            border-radius: 8px;
+            scroll-snap-align: start;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,26 +52,41 @@
         </div>
     </header>
     <main>
-        <div class="usuario">
-            <h2 class="text-center">Aula 165</h2>
-            <div class="row justify-content-center align-items-center">
-                <div class="circle d-flex flex-column align-items-center col-sm-4">
-                    <span class="mt-2" id="temperaturaSpan">25 º</span>
-                    <button class="btn btn-primary rounded-circle mt-2 mx-2 circulo" id="temperatura">
-
-                    </button>
+        <div class="container">
+            <div class="item">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <span class="my-2" id="temperaturaSpan">25 º</span>
+                    <div class="distortedTemp">
+                        <button class="btn btn-circle" id="temperatura">
+                            <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
+                        </button>
+                    </div>
                 </div>
-                <div class="circle d-flex flex-column align-items-center col-sm-4">
-                    <span class="mt-2" id="humedadSpan">100%</span>
-                    <button class="btn btn-primary rounded-circle mt-2 mx-2 circulo" id="humedad">
-
-                    </button>
+            </div>
+            <div class="item">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <span class="my-2" id="humedadSpan">100%</span>
+                    <div class="distortedHum">
+                        <button class="btn btn-circle" id="humedad">
+                            <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
+                        </button>
+                    </div>
                 </div>
-                <div class="circle d-flex flex-column align-items-center col-sm-4">
-                    <span class="mt-2" id="personasSpan">10</span>
-                    <button class="btn btn-primary rounded-circle mt-2 mx-2 circulo" id="personas">
-
-                    </button>
+            </div>
+            <div class="item">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <span class="my-2" id="personasSpan">10</span>
+                    <div class="distortedPer">
+                        <button class="btn btn-circle" id="personas">
+                            <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
+                            <!-- mas de 10 personas -->
+                            <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                            <!-- de 5 a 10 personas -->
+                            <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
+                            <!-- de 0 a 5 personas  -->
+                            <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
