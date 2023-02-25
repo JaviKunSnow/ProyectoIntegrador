@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div id="myCarousel" class="carousel slide d-block d-sm-block d-md-none d-lg-none mt-5 pt-4" data-ride="#e33c13">
+        <div id="myCarousel" class="carousel slide carousel-dark d-block d-sm-block d-md-none d-lg-none mt-5 pt-4" data-ride="#e33c13">
             <div class="carousel-inner">
                 <div class="carousel-item active ms-3 ps-2">
                     <div class="circle d-flex flex-column align-items-center">
@@ -88,12 +88,12 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev btn btn-success" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next btn btn-success" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
