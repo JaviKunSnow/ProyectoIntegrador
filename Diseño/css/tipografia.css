@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Tumbly";
+    src: url("../tipografia/Tumbly.otf");
+}
+
+h5 {
+    font-family: 'Tumbly', serif;
+    font-weight: bold;
+}

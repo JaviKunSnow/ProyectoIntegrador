@@ -1,19 +1,26 @@
 footer>div {
-    background-color: #4e9483;
+    background-color: #4e9078;
     color: white;
 }
 
-span {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-}
-
-div>header {
+header {
+    /* border-bottom: 2px #3b705d solid; */
     background-color: #3b705d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
-.logout:hover{
-    border: 1px solid rgb(60, 60, 60);
-    color: white;
-    background-color: darkgray;
+.logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.lg{
+    width: 300px;
+}
+
+.boton {
+    text-align: right;
 }
