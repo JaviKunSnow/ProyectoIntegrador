@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dependiendo de que pagina sea tendra un css diferente -->
     <link rel="stylesheet" href="css/layoutStyle.css">
+    <link rel="stylesheet" href="css/userStyle.css">
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
     <title>Layout</title>
@@ -30,7 +31,26 @@
         </div>
     </header>
     <main>
+        <div class="usuario d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column align-items-center">
+                <span class="mt-2" id="temperaturaSpan">25 º</span>
+                <button class="btn btn-primary rounded-circle mt-2 mx-5 circulo" id="temperatura">
 
+                </button>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <span class="mt-2" id="humedadSpan">100%</span>
+                <button class="btn btn-primary rounded-circle mt-2 mx-5 circulo" id="humedad">
+
+                </button>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <span class="mt-2" id="personasSpan">10</span>
+                <button class="btn btn-primary rounded-circle mt-2 mx-5 circulo" id="personas">
+
+                </button>
+            </div>
+        </div>
     </main>
     <footer class="bg-light text-center text-lg-start fixed-bottom">
         <div class="text-center p-3">

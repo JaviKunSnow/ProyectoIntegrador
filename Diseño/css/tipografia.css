@@ -2,3 +2,13 @@
     font-family: "Tumbly";
     src: url("../tipografia/Tumbly.otf");
 }
+
+@font-face {
+    font-family: "Stencil";
+    src: url("../tipografia/FunCityLevel2Stencil.otf");
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../tipografia/Orbitron-VariableFont_wght.ttf");
+}

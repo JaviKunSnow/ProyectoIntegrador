@@ -1,0 +1,83 @@
+.usuario {
+    margin-top: 100px;
+}
+
+.circulo {
+    width: 300px;
+    height: 300px;
+    border: 0;
+}
+
+span {
+    font-family: 'Orbitron', serif;
+    font-weight: bold;
+    color: #6c6c6b;
+    font-size: x-large;
+}
+
+#temperaturaSpan {
+    /* Temperatura alta */
+    /* color: #ec3f39; */
+    /* Temperatura normal */
+    color: #ec8939;
+    /* Temperatura baja */
+    /* color: #ecc239; */
+}
+
+#humedadSpan {
+    /* Humedad alta */
+    /* color: #1d7eee; */
+    /* Humedad normal */
+    color: #3c90f0;
+    /* Humedad baja */
+    /* color: #89baf1; */
+}
+
+#personasSpan {
+    color: #e385a4;
+}
+
+
+#temperatura {
+    /* Temperatura alta */
+    /* background-color: #ec3f39; */
+    /* Temperatura normal */
+    background-color: #ec8939;
+    /* Temperatura baja */
+    /* background-color: #ecc239; */
+}
+
+#temperatura:hover {
+    /* Temperatura alta */
+    /* background-color: #e9544f; */
+    /* Temperatura normal */
+    background-color: #eb9854;
+    /* Temperatura baja */
+    /* background-color: #e9c756; */
+}
+
+#humedad {
+    /* Humedad alta */
+    /* background-color: #1d7eee; */
+    /* Humedad normal */
+    background-color: #3c90f0;
+    /* Humedad baja */
+    /* background-color: #89baf1; */
+}
+
+#humedad:hover {
+    /* Humedad alta */
+    /* background-color: #378cec; */
+    /* Humedad normal */
+    background-color: #5ea3f1;
+    /* Humedad baja */
+    /* background-color: #a4c6ee; */
+}
+
+#personas {
+    background-color: #e385a4;
+}
+
+#personas:hover {
+    background-color: #e09cb3;
+}
