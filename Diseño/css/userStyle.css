@@ -17,6 +17,8 @@ h3 {
 .circulo {
     width: 300px;
     height: 300px;
+    border: 2px dashed black;
+    padding: 20px;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -57,10 +59,7 @@ span {
     color: #e385a4;
 }
 
-
 #temperatura {
-    border: 2px solid black;
-    padding: 10px transparent;
     /* Temperatura alta */
     /* background-color: #ec3f39; */
     /* Temperatura normal */
@@ -79,7 +78,6 @@ span {
 }
 
 #humedad {
-    border: 2px solid black;
     /* Humedad alta */
     /* background-color: #1d7eee; */
     /* Humedad normal */
@@ -98,7 +96,6 @@ span {
 }
 
 #personas {
-    border: 2px solid black;
     background-color: #e385a4;
 }
 

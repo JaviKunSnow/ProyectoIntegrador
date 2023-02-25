@@ -36,7 +36,8 @@
             <div class="row justify-content-center align-items-center">
                 <div class="circle d-flex flex-column align-items-center mx-0 mx-lg-4 col-md-4">
                     <span class="mt-2" id="temperaturaSpan">25 º</span>
-                    <button class="btn btn-primary rounded-circle mx-0 mx-lg-5 mt-2 circulo" id="temperatura">
+                    <button class=" btn btn-primary rounded-circle mx-0 mx-lg-5 mt-2 circulo" id="temperatura">
+                        <div></div>
                         <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
                     </button>
                 </div>
@@ -74,36 +75,36 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <di class="d-flex flex-column justify-content-center align-items-center h-100">
                         <span class="mt-2" id="humedadSpan">100%</span>
                         <button class="btn btn-primary rounded-circle mt-2 circulo" id="humedad">
                             <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
                         </button>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                        <span class="mt-2" id="personasSpan">10</span>
-                        <button class="btn btn-primary rounded-circle mt-2 circulo" id="personas">
-                            <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
-                            <!-- mas de 10 personas -->
-                            <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
-                            <!-- de 5 a 10 personas -->
-                            <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
-                            <!-- de 0 a 5 personas  -->
-                            <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
-                        </button>
-                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <span class="mt-2" id="personasSpan">10</span>
+                    <button class="btn btn-primary rounded-circle mt-2 circulo" id="personas">
+                        <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
+                        <!-- mas de 10 personas -->
+                        <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                        <!-- de 5 a 10 personas -->
+                        <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
+                        <!-- de 0 a 5 personas  -->
+                        <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
 
     </main>
