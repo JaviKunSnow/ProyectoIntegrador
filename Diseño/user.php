@@ -61,26 +61,28 @@
             </div>
         </div>
 
+        <!-- Carrusel -->
         <div id="myCarousel" class="carousel slide carousel-dark d-block d-sm-block d-md-none d-lg-none mt-5 pt-4" data-ride="#e33c13">
+            <h3 class="text-center">Aula 165</h3>
             <div class="carousel-inner">
-                <div class="carousel-item active ms-3 ps-2">
-                    <div class="circle d-flex flex-column align-items-center">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <span class="mt-2" id="temperaturaSpan">25 º</span>
                         <button class="btn btn-primary rounded-circle mt-2 circulo" id="temperatura">
                             <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
                         </button>
                     </div>
                 </div>
-                <div class="carousel-item ms-3 ps-2">
-                    <div class="circle d-flex flex-column align-items-center">
+                <div class="carousel-item">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <span class="mt-2" id="humedadSpan">100%</span>
                         <button class="btn btn-primary rounded-circle mt-2 circulo" id="humedad">
                             <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
                         </button>
                     </div>
                 </div>
-                <div class="carousel-item ms-3 ps-2">
-                    <div class="circle d-flex flex-column align-items-center">
+                <div class="carousel-item">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <span class="mt-2" id="personasSpan">10</span>
                         <button class="btn btn-primary rounded-circle mt-2 circulo" id="personas">
                             <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
@@ -90,13 +92,14 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
+
     </main>
     <footer class="bg-light text-center text-lg-start fixed-bottom">
         <div class="text-center p-3">
