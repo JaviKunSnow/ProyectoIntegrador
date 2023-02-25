@@ -17,10 +17,11 @@ header {
     text-align: center;
 }
 
-.lg{
+.lg {
     width: 300px;
 }
 
 .boton {
+    font-family: 'Tumbly', serif;
     text-align: right;
 }
