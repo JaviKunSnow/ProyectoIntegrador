@@ -65,7 +65,8 @@ class sensoresDAO extends FactoryBD implements DAO {
     }
 
     public static function findDatosByLastMonth() {
-        $sql = "SELECT WEEK(fecha) AS semana, AVG(humedad) AS humedad_media, AVG(temperatura) AS temperatura_media, AVG(luminosidad) AS luminosidad_media, AVG(personas) AS personas_media FROM sensores WHERE fecha >= DATE_SUB(NOW(), INTERVAL 1 MONTH) GROUP BY WEEK(fecha)";
+        //$sql = "SELECT WEEK(fecha) AS semana, AVG(humedad) AS humedad_media, AVG(temperatura) AS temperatura_media, AVG(luminosidad) AS luminosidad_media, AVG(personas) AS personas_media FROM sensores WHERE fecha >= DATE_SUB(NOW(), INTERVAL 2 MONTH) GROUP BY WEEK(fecha)";
+        $sql = "SELECT WEEK(fecha) AS semana, AVG(humedad) AS media_humedad, AVG(temperatura) AS media_temperatura, AVG(luminosidad) AS media_luminosidad, AVG(personas) AS media_personas FROM sensores WHERE fecha >= DATE_ADD(LAST_DAY(DATE_SUB(NOW(), INTERVAL 2 MONTH)), INTERVAL 1 DAY) AND fecha < DATE_ADD(LAST_DAY(NOW()), INTERVAL 1 DAY) AND MONTH(fecha) <> MONTH(NOW()) GROUP BY WEEK(fecha)";
         $datos = array();
         $devuelve = parent::ejecuta($sql,$datos);
         $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);

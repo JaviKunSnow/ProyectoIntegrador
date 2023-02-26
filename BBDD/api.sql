@@ -41,6 +41,13 @@ insert into arduino (idArduino, nombre) values (3, "524");
 
 ALTER TABLE sensores AUTO_INCREMENT = 1;
 
+
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2022-12-29 08:00:15', 90.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-5 08:00:15', 46.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-12 08:00:10', 61.4, 2.2, 900, 12, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-19 08:00:15', 46.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-26 08:00:15', 46.4, 15.5, 700, 20, 2);
+
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-12 08:00:00', 30.4, 3.5, 700, 20, 2);
 
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-13 08:00:00', 30.4, 3.5, 700, 2);
@@ -75,6 +82,7 @@ insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArdu
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-19 08:00:10', 61.4, 2.2, 900, 12, 2);
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-19 08:00:15', 46.4, 15.5, 700, 20, 2);
 
-insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-17 08:00:00', 30.4, 41.5, 700, 1, 2);
-insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-16 08:00:10', 61.4, 2.2, 900, 12, 2);
-insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-15 08:00:15', 46.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-20 08:00:15', 46.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-21 08:00:15', 46.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-22 08:00:15', 46.4, 15.5, 700, 20, 2);
+
