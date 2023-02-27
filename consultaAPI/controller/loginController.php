@@ -18,9 +18,11 @@ if(isset($_REQUEST["enviar"])) {
                 if(estaValidado() && esAdmin()) {
                     $_SESSION['vista'] = $vistas['admin'];
                     $_SESSION['controlador'] = $controladores['admin'];
+                    $_SESSION['css'] = $css['admin'];
                 } else {
-                    $_SESSION['vista'] = $vistas['alduino'];
-                    $_SESSION['controlador'] = $controladores['alduino'];
+                    $_SESSION['vista'] = $vistas['user'];
+                    $_SESSION['controlador'] = $controladores['user'];
+                    $_SESSION['css'] = $css['user'];
                 }
 
                 header('location: ./index.php');

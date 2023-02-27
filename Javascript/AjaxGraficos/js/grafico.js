@@ -1,5 +1,5 @@
 
-const SERVER = "http://192.168.1.110/ProyectoIntegrador/API/api.php";
+const SERVER = "http://192.168.2.206/ProyectoIntegrador/API/api.php";
 const ctx = document.getElementById("grafico");
 
 const humedad = [];
@@ -124,7 +124,7 @@ async function graficoSemana(semana) {
         data: luminosidad,
         fill: false,
         borderColor: 'rgb(75, 192, 192)'
-      },*/
+      } ,*/
       {
         label: 'Personas',
         data: personas,
@@ -173,10 +173,10 @@ async function graficoMes(mes) {
   }
 
   for await(objeto of mes) {
-    humedad.push(objeto.humedad_media);
-    temperatura.push(objeto.temperatura_media);
-    luminosidad.push(objeto.luminosidad_media);
-    personas.push(objeto.personas_media);
+    humedad.push(objeto.media_humedad);
+    temperatura.push(objeto.media_temperatura);
+    luminosidad.push(objeto.media_luminosidad);
+    personas.push(objeto.media_personas);
   }
 
   const labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
@@ -194,12 +194,12 @@ async function graficoMes(mes) {
         fill: false,
         borderColor: 'rgb(75, 192, 192)'
       },
-      /*{
+      {
         label: 'Luminosidad',
         data: luminosidad,
         fill: false,
         borderColor: 'rgb(75, 192, 192)'
-      },*/
+      },
       {
         label: 'Personas',
         data: personas,

@@ -1,0 +1,38 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-bottom: 70px;
+}
+
+
+header {
+    /* border-bottom: 2px #3b705d solid; */
+    background-color: #3b705d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.lg {
+    width: 300px;
+}
+
+.boton {
+    font-family: 'Tumbly', serif;
+    text-align: right;
+}
+
+footer>div {
+    background-color: #4e9078;
+    color: white;
+}

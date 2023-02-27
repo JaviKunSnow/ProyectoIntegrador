@@ -18,6 +18,7 @@ if(isset($_REQUEST["logout"])) {
         $_SESSION['controlador'] = $controladores['login'];
         $_SESSION['pagina'] = 'login';
         $_SESSION['vista'] = $vistas['login'];
+        $_SESSION['css'] = $css['login'];
         require_once($_SESSION['controlador']);
 
     } else {
