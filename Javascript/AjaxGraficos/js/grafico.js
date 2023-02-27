@@ -1,48 +1,12 @@
 
-const SERVER = "http://192.168.2.206/ProyectoIntegrador/API/api.php";
+const ip = document.getElementById("ip").value;
+const SERVER = `http://${ip}/ProyectoIntegrador/API/api.php`;
 const ctx = document.getElementById("grafico");
 
 const humedad = [];
 const temperatura = [];
 const luminosidad = [];
 const personas = [];
-
-/*$(document).ready(function () {
-    $.ajax({
-        type: "GET",
-        url: "http://192.168.1.110/Integrador/API/api.php/sensores",
-        dataType: "application/json",
-        success: function (response) {
-            datos = response;
-        }
-    });
-
-    $("#boton").click(function (e) { 
-        e.preventDefault();
-        
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-              datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1
-              }]
-            },
-            options: {
-              scales: {
-                y: {
-                  beginAtZero: true
-                }
-              }
-            }
-          });
-
-    });
-});
-
-console.log(datos);*/
 
 window.addEventListener("load", async () => {
   
@@ -68,6 +32,12 @@ window.addEventListener("load", async () => {
       default:
         break;
     }
+  })
+
+  document.getElementById("verTabla").addEventListener("click", async (e) => {
+    e.preventDefault();
+
+    
   })
 })
 
