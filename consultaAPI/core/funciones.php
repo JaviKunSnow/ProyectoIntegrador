@@ -15,5 +15,3 @@ function esAdmin() {
     }
     return false;
 }
-
-?>

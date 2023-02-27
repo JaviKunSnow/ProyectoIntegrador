@@ -79,6 +79,8 @@ span {
     margin-left: 25px;
     margin-right: 25px;
     transition: transform 0.2s;
+    margin-top: 10px;
+    margin-bottom: 10px; 
 }
 
 .actuadores:hover {
