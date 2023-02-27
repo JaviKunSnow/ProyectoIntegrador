@@ -1,8 +1,7 @@
 <?php
 
-define('HOST', '192.168.2.206');
-define('USER', 'javier');
-define('PASS', 'javier');
+define('USER', 'proyecto');
+define('PASS', 'proyecto');
 define('BBDD', 'login');
 
 ?>

@@ -18,7 +18,7 @@
 <body>
     <header>
         <div class="logo py-2 ms-5">
-            <img src="multimedia/logo_blanco.png" alt="Logo" class="lg img-fluid px-3">
+            <img src="./web/multimedia/logo_blanco.png" alt="Logo" class="lg img-fluid px-3">
         </div>
         <!-- Si no esta logueado este boton desaparece -->
         <div class="boton">

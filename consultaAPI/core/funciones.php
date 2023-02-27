@@ -9,7 +9,7 @@ function estaValidado() {
 
 function esAdmin() {
     if(isset($_SESSION["rol"])){
-        if($_SESSION["rol"] == "ADM") {
+        if($_SESSION["rol"] == "admin") {
             return true;
         }
     }
