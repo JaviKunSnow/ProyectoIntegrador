@@ -32,14 +32,14 @@
     <!-- aparece a partir de tener iniciada la sesion -->
     <nav aria-label="breadcrumb" class="navegador navbar navbar-expand">
         <ol class="breadcrumb m-0">
-            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#">Plantas</a></li>
-            <li class="breadcrumb-item"><a href="#">Aulas</a></li>
-            <li class="breadcrumb-item"><a href="#">Aula 522</a></li>
+            <li class="breadcrumb-item"><button>Inicio</button></li>
+            <li class="breadcrumb-item"><button>Plantas</button></li>
+            <li class="breadcrumb-item"><button>Aulas</button></li>
+            <li class="breadcrumb-item"><button>Aula 522</button></li>
             <li class="breadcrumb-item active ">Detalles</li>
         </ol>
     </nav>
-
+    
     <main class="sticky-top">
 
     </main>
