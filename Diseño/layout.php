@@ -49,6 +49,7 @@
                             <button class="ultimo btn btn-link text-dark" disabled>Detalles</button>
                         </li>
                     </ol>
+                    <!-- Este buscador solo aparece cuando el admin se encuentra en la seccion de AULAS -->
                     <form class="d-flex">
                         <input class="buscadorI form-control form-control-sm " type="search" placeholder="Buscar" aria-label="Buscar">
                         <button class="buscador btn btn-secondary" type="submit">
