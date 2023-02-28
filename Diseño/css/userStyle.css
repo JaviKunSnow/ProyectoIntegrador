@@ -67,8 +67,11 @@ span {
 .actuadores {
     color: black;
     border: 0;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
+/* dependiendo de que actuador este encendido o apagado se le cambia esto */
 .apagado {
     background-color: #8edd8b;
 }
@@ -151,12 +154,12 @@ span {
     background-color: #e09cb3;
 }
 
-.detalles{
+.detalles {
     background-color: #3b705d;
     border: 0;
 }
 
-.detalles:hover{
+.detalles:hover {
     background-color: #4e9078;
     border: 1px solid #3b705d;
 }
