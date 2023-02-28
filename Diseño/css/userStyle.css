@@ -67,8 +67,8 @@ span {
 .actuadores {
     color: black;
     border: 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 /* dependiendo de que actuador este encendido o apagado se le cambia esto */
