@@ -133,7 +133,7 @@
             </button>
         </div>
 
-        <div class="actuadores btn-group d-grid gap-2 d-md-flex justify-content-md-end mt-4" role="group">
+        <div class="actuadores btn-group d-grid gap-2 d-md-flex justify-content-md-end my-5" role="group">
             <button class="btn apagado btn-sm btn-lg">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
