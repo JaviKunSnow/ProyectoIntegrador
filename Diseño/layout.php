@@ -31,15 +31,14 @@
     </header>
     <!-- aparece a partir de tener iniciada la sesion -->
     <nav aria-label="breadcrumb" class="navegador navbar navbar-expand">
-        <ol class="breadcrumb m-0">
-            <li class="breadcrumb-item"><button>Inicio</button></li>
-            <li class="breadcrumb-item"><button>Plantas</button></li>
-            <li class="breadcrumb-item"><button>Aulas</button></li>
-            <li class="breadcrumb-item"><button>Aula 522</button></li>
-            <li class="breadcrumb-item active ">Detalles</li>
+        <ol class="breadcrumb mx-1 my-0">
+            <li class="breadcrumb-item"><button class="bread btn btn-link">Plantas</button></li>
+            <li class="breadcrumb-item"><button class="bread btn btn-link">Aulas</button></li>
+            <li class="breadcrumb-item"><button class="bread btn btn-link">Aula 522</button></li>
+            <li class="breadcrumb-item active"><button class="ultimo btn btn-link text-dark" disabled>Detalles</li>
         </ol>
     </nav>
-    
+
     <main class="sticky-top">
 
     </main>
