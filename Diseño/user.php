@@ -134,25 +134,25 @@
         </div>
 
         <div class="btn-group d-grid gap-2 d-md-flex justify-content-md-end mt-4" role="group">
-            <button type="button" class="btn apagado btn-sm">
+            <button class="btn apagado btn-sm actuadores">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
                 </span>
                 Ventilador
             </button>
-            <button type="button" class="btn encendido btn-sm">
+            <button class="btn encendido btn-sm actuadores">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
                 </span>
                 Calefacción
             </button>
-            <button type="button" class="btn apagado btn-sm">
+            <button class="btn apagado btn-sm actuadores">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
                 </span>
                 Luces
             </button>
-            <button type="button" class="btn encendido btn-sm">
+            <button class="btn encendido btn-sm actuadores">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
                 </span>

@@ -65,16 +65,9 @@ span {
 }
 
 .actuadores {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
     border: 0;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 100px;
 }
-
 
 .apagado {
     background-color: #8edd8b;
