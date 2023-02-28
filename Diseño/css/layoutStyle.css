@@ -8,7 +8,6 @@ main {
     margin-bottom: 70px;
 }
 
-
 header {
     /* border-bottom: 2px #3b705d solid; */
     background-color: #3b705d;
@@ -30,12 +29,6 @@ header {
 .boton {
     font-family: 'Tumbly', serif;
     text-align: right;
-}
-
-footer>div {
-    background-color: #4e9078;
-    color: white;
-    font-size: 11px;
 }
 
 .navegador {
@@ -66,7 +59,7 @@ footer>div {
 }
 
 .breadcrumb-item.active {
-    color: #007bff;
+    color: #858585;
 }
 
 .btn-link {
@@ -76,10 +69,16 @@ footer>div {
 }
 
 .btn-link:hover {
-    color: #007bff;
+    color: #858585;
     text-decoration: none;
 }
 
-.ultimo{
+.ultimo {
     text-decoration: none
+}
+
+footer>div {
+    background-color: #4e9078;
+    color: white;
+    font-size: 11px;
 }

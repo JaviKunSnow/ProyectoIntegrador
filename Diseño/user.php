@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dependiendo de que pagina sea tendra un css diferente -->
     <link rel="stylesheet" href="css/layoutStyle.css">
-<link rel="stylesheet" href="css/userStyle.css">
+    <link rel="stylesheet" href="css/userStyle.css">
 
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
@@ -47,8 +47,8 @@
     </nav>
 
     <main class="sticky-top">
+        <h2 class="text-center my-3">Aula 165</h2>
         <div class="usuario d-none d-sm-none d-md-block d-lg-block">
-            <h2 class="text-center">Aula 165</h2>
             <div class="d-flex row justify-content-center align-items-center mx-0">
                 <div class="circle d-flex flex-column align-items-center col-md-4">
                     <span class="my-2" id="temperaturaSpan">25 º</span>
@@ -87,7 +87,7 @@
         <div id="carouselDarkVariant" class="carousel slide carousel-dark d-block d-sm-block d-md-none d-lg-none mt-2" data-ride="#e33c13">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-flex flex-column justify-content-center align-items-center ">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
                         <span class="my-2" id="temperaturaSpan">25 º</span>
                         <div class="distortedTemp">
                             <button class="btn btn-circle" id="temperatura">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
                         <span class="my-2" id="humedadSpan">100%</span>
                         <div class="distortedHum">
                             <button class="btn btn-circle" id="humedad">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
                         <span class="my-2" id="personasSpan">10</span>
                         <div class="distortedPer">
                             <button class="btn btn-circle" id="personas">
@@ -133,26 +133,26 @@
             </button>
         </div>
 
-        <div class="d-flex flex-wrap justify-content-center my-5 btn-group" role="group">
-            <button class="btn encendido actuadores">
+        <div class="btn-group d-grid gap-2 d-md-flex justify-content-md-end mt-4" role="group">
+            <button type="button" class="btn apagado btn-sm">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
                 </span>
                 Ventilador
             </button>
-            <button class="btn apagado actuadores">
+            <button type="button" class="btn encendido btn-sm">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
                 </span>
                 Calefacción
             </button>
-            <button class="btn encendido actuadores ">
+            <button type="button" class="btn apagado btn-sm">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
                 </span>
                 Luces
             </button>
-            <button class="btn apagado actuadores">
+            <button type="button" class="btn encendido btn-sm">
                 <span class="me-2">
                     <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
                 </span>
@@ -160,8 +160,9 @@
             </button>
         </div>
 
+
         <div class="d-flex justify-content-center mt-3">
-            <button class="detalles btn btn-secondary btn-block btn-lg">
+            <button class="detalles btn btn-secondary btn-block btn-lg w-25">
                 Detalles
             </button>
         </div>
