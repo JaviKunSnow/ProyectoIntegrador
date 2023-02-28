@@ -24,11 +24,12 @@
             <canvas id="grafico"></canvas>
         </div>
     </section>
-    <section>
+    <section id="filtrosTabla" class="d-none">
         <form id="form">
             <label for="">fecha inicio</label>
             <input type="datetime" id="fecha1">
-
+            <label for="">fecha inicio</label>
+            <input type="datetime" id="fecha1">
         </form>
     </section>
     <section id="secTableSensor" class="d-none">

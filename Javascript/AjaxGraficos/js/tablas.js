@@ -1,6 +1,7 @@
 const secGrafico = document.getElementById("secGrafico");
 const secTableSensor = document.getElementById("secTableSensor");
 const secTableActuador = document.getElementById("secTableActuador");
+const filtrosTablas = document.getElementById("filtrosTablas");
 
 const verGrafico = document.getElementById("verGrafico");
 const verTablaSensores = document.getElementById("verTablaSensores");
@@ -34,6 +35,7 @@ window.addEventListener("load", async () => {
         secGrafico.className = "d-block";
         secTableSensor.className = "d-none";
         secTableActuador.className = "d-none";
+        filtrosTablas.className = "d-none";
     
       })
     
@@ -47,6 +49,7 @@ window.addEventListener("load", async () => {
         secGrafico.className = "d-none";
         secTableSensor.className = "d-block";
         secTableActuador.className = "d-none";
+        filtrosTablas.className = "d-block";
     
       })
     
@@ -60,6 +63,7 @@ window.addEventListener("load", async () => {
         secGrafico.className = "d-none";
         secTableSensor.className = "d-none";
         secTableActuador.className = "d-block";
+        filtrosTablas.className = "d-block";
     
       })
 
