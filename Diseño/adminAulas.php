@@ -67,12 +67,12 @@
                 </div>
             </div>
         </nav>
-        <div class="usuario">
-            <h2 class="text-center">Aulas</h2>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <!-- Aqui supongo que podria ir un foreach para poner automaticamente la cantidad de aulas que tengamos...supongo -->
-                    <div class="circleAulas col-6 col-md-4 ms-4">
+        <!-- <div class="usuario"> -->
+        <h2 class="text-center">Aulas</h2>
+        <!-- <div class="container"> -->
+        <!-- Aqui supongo que podria ir un foreach para poner automaticamente la cantidad de aulas que tengamos...supongo -->
+        <!-- <div class="row justify-content-center">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta1">
                                 <div class="mt-3">
@@ -81,7 +81,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4 ms-4">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta2">
                                 <div class="mt-3">
@@ -90,7 +90,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4 ms-4">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta3">
                                 <div class="mt-3">
@@ -100,28 +100,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center mt-5">
-                    <div class="circleAulas col-6 col-md-4 ms-4">
+                <div class="row justify-content-center">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
                         <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta4">
+                            <button class="botonAulas btn btn-circle" id="planta1">
                                 <div class="mt-3">
                                     <h4>AULA 103</h4>
                                 </div>
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4 ms-4">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
                         <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta5">
+                            <button class="botonAulas btn btn-circle" id="planta2">
                                 <div class="mt-3">
                                     <h4>AULA 104</h4>
                                 </div>
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4 ms-4">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
                         <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta5">
+                            <button class="botonAulas btn btn-circle" id="planta3">
                                 <div class="mt-3">
                                     <h4>AULA 105</h4>
                                 </div>
@@ -129,7 +129,112 @@
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="circleAulas col-6 col-md-4 mx-4">
+                        <div class="distortedAulas">
+                            <button class="botonAulas btn btn-circle" id="planta1">
+                                <div class="mt-3">
+                                    <h4>AULA 106</h4>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="circleAulas col-6 col-md-4 mx-4">
+                        <div class="distortedAulas">
+                            <button class="botonAulas btn btn-circle" id="planta2">
+                                <div class="mt-3">
+                                    <h4>AULA 107</h4>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="circleAulas col-6 col-md-4 mx-4">
+                        <div class="distortedAulas">
+                            <button class="botonAulas btn btn-circle" id="planta3">
+                                <div class="mt-3">
+                                    <h4>AULA 108</h4>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div> -->
+
+        <div class="container">
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="distortedAulas">
+                    <button class="botonAulas btn btn-circle" id="planta3">
+                        <div class="mt-3">
+                            <h4>AULA 108</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
     <div class="container-fluid px-0 pt-1">
         <footer class="bg-light text-center text-lg-start fixed-bottom">
