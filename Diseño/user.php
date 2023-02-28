@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dependiendo de que pagina sea tendra un css diferente -->
     <link rel="stylesheet" href="css/layoutStyle.css">
-    <link rel="stylesheet" href="css/userStyle.css">
+<link rel="stylesheet" href="css/userStyle.css">
+
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
     <title>Layout</title>
@@ -83,11 +84,10 @@
         </div>
 
         <!-- Carrusel -->
-        <div id="carouselDarkVariant" class="carousel slide carousel-dark d-block d-sm-block d-md-none d-lg-none mt-5 pt-4" data-ride="#e33c13">
-            <h3 class="text-center">Aula 165</h3>
+        <div id="carouselDarkVariant" class="carousel slide carousel-dark d-block d-sm-block d-md-none d-lg-none mt-2" data-ride="#e33c13">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                    <div class="d-flex flex-column justify-content-center align-items-center ">
                         <span class="my-2" id="temperaturaSpan">25 º</span>
                         <div class="distortedTemp">
                             <button class="btn btn-circle" id="temperatura">
@@ -133,31 +133,38 @@
             </button>
         </div>
 
-        <div class="d-flex flex-wrap justify-content-center mt-5 pt-3">
+        <div class="d-flex flex-wrap justify-content-center my-5 btn-group" role="group">
             <button class="btn encendido actuadores">
-                <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
+                </span>
                 Ventilador
             </button>
             <button class="btn apagado actuadores">
-                <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
+                </span>
                 Calefacción
             </button>
-            <button class="btn encendido actuadores">
-                <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
+            <button class="btn encendido actuadores ">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
+                </span>
                 Luces
             </button>
             <button class="btn apagado actuadores">
-                <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
+                </span>
                 Ventanas
             </button>
         </div>
 
-        <div class="d-flex flex-wrap justify-content-center mt-2 pt-3">
-            <button class="btn btn-secondary  btn-lg">
+        <div class="d-flex justify-content-center mt-3">
+            <button class="detalles btn btn-secondary btn-block btn-lg">
                 Detalles
             </button>
         </div>
-
     </main>
     <div class="container-fluid px-0 pt-1">
         <footer class="bg-light text-center text-lg-start fixed-bottom">
