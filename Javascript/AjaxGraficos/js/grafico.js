@@ -14,12 +14,12 @@ window.addEventListener("load", async () => {
     const sensoresSemana = await datosSemana();
     graficoSemana(sensoresSemana);
   }
-  
+
   document.getElementById("boton").addEventListener("change", async (e) => {
     e.preventDefault();
 
     let valor = document.getElementById("boton").value;
-
+    
     switch (valor) {
       case "semana":
         const sensoresSemana = await datosSemana();
@@ -34,11 +34,6 @@ window.addEventListener("load", async () => {
     }
   })
 
-  document.getElementById("verTabla").addEventListener("click", async (e) => {
-    e.preventDefault();
-
-    
-  })
 })
 
 async function datosSemana() { 
@@ -57,8 +52,7 @@ async function datosSemana() {
 }
 
 async function graficoSemana(semana) {
-  
-  document.getElementById("grafico").innerHTML = "";
+
 
   if(humedad.length != 0) {
     humedad.length = 0;
@@ -132,8 +126,6 @@ async function datosMes() {
 }
 
 async function graficoMes(mes) {
-  
-  document.getElementById("grafico").clear;
 
   if(humedad.length != 0) {
     humedad.length = 0;
@@ -190,4 +182,3 @@ async function graficoMes(mes) {
     );
     
 }
-
