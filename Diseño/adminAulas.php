@@ -67,171 +67,91 @@
                 </div>
             </div>
         </nav>
-        <!-- <div class="usuario"> -->
-        <h2 class="text-center">Aulas</h2>
-        <!-- <div class="container"> -->
-        <!-- Aqui supongo que podria ir un foreach para poner automaticamente la cantidad de aulas que tengamos...supongo -->
-        <!-- <div class="row justify-content-center">
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta1">
-                                <div class="mt-3">
-                                    <h4>AULA 100</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta2">
-                                <div class="mt-3">
-                                    <h4>AULA 101</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta3">
-                                <div class="mt-3">
-                                    <h4>AULA 102</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        <div class="usuario">
+            <h2 class="text-center">Aulas</h2>
+            <div class="container">
+                <!-- Aqui supongo que podria ir un foreach para poner automaticamente la cantidad de aulas que tengamos...supongo -->
                 <div class="row justify-content-center">
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta1">
-                                <div class="mt-3">
-                                    <h4>AULA 103</h4>
+                    <div class="col-12 text-right d-flex justify-content-end">
+                        <a class="me-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#e33c13" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                            </svg>
+                        </a>
+                        <a href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle " viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="#e33c13">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row justify-content-center">
+                                        <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                            <div class="distortedAulas">
+                                                <button class="botonAulas btn btn-circle" id="planta1">
+                                                    <div class="mt-3">
+                                                        <h4>AULA 100</h4>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                            <div class="distortedAulas">
+                                                <button class="botonAulas btn btn-circle" id="planta1">
+                                                    <div class="mt-3">
+                                                        <h4>AULA 101</h4>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                            <div class="distortedAulas">
+                                                <button class="botonAulas btn btn-circle" id="planta1">
+                                                    <div class="mt-3">
+                                                        <h4>AULA 102</h4>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </button>
+                                <div class="carousel-item">
+                                    <div class="row justify-content-center">
+                                        <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                            <div class="distortedAulas">
+                                                <button class="botonAulas btn btn-circle" id="planta1">
+                                                    <div class="mt-3">
+                                                        <h4>AULA 103</h4>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                            <div class="distortedAulas">
+                                                <button class="botonAulas btn btn-circle" id="planta1">
+                                                    <div class="mt-3">
+                                                        <h4>AULA 104</h4>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                            <div class="distortedAulas">
+                                                <button class="botonAulas btn btn-circle" id="planta1">
+                                                    <div class="mt-3">
+                                                        <h4>AULA 105</h4>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta2">
-                                <div class="mt-3">
-                                    <h4>AULA 104</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta3">
-                                <div class="mt-3">
-                                    <h4>AULA 105</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta1">
-                                <div class="mt-3">
-                                    <h4>AULA 106</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta2">
-                                <div class="mt-3">
-                                    <h4>AULA 107</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="circleAulas col-6 col-md-4 mx-4">
-                        <div class="distortedAulas">
-                            <button class="botonAulas btn btn-circle" id="planta3">
-                                <div class="mt-3">
-                                    <h4>AULA 108</h4>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="container">
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="distortedAulas">
-                    <button class="botonAulas btn btn-circle" id="planta3">
-                        <div class="mt-3">
-                            <h4>AULA 108</h4>
-                        </div>
-                    </button>
                 </div>
             </div>
         </div>
