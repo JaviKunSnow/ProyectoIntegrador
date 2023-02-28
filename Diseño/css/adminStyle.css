@@ -3,7 +3,7 @@ a {
 }
 
 .usuario {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .circle {
@@ -20,6 +20,10 @@ a {
     width: 350px;
     height: 350px;
     transition: transform 0.2s;
+}
+
+.circleAulas:hover {
+    transform: scale(1.1);
 }
 
 .distorted,

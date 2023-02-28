@@ -71,7 +71,8 @@
             <h2 class="text-center">Aulas</h2>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="circleAulas col-6 col-md-4">
+                    <!-- Aqui supongo que podria ir un foreach para poner automaticamente la cantidad de aulas que tengamos...supongo -->
+                    <div class="circleAulas col-6 col-md-4 ms-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta1">
                                 <div class="mt-3">
@@ -80,7 +81,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4">
+                    <div class="circleAulas col-6 col-md-4 ms-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta2">
                                 <div class="mt-3">
@@ -89,7 +90,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4">
+                    <div class="circleAulas col-6 col-md-4 ms-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta3">
                                 <div class="mt-3">
@@ -101,7 +102,7 @@
                 </div>
                 <div class="row justify-content-center">
 
-                    <div class="circleAulas col-6 col-md-4">
+                    <div class="circleAulas col-6 col-md-4 ms-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta4">
                                 <div class="mt-3">
@@ -110,7 +111,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4">
+                    <div class="circleAulas col-6 col-md-4 ms-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta5">
                                 <div class="mt-3">
@@ -119,7 +120,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="circleAulas col-6 col-md-4">
+                    <div class="circleAulas col-6 col-md-4 ms-4">
                         <div class="distortedAulas">
                             <button class="botonAulas btn btn-circle" id="planta5">
                                 <div class="mt-3">
