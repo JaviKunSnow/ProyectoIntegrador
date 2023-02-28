@@ -29,18 +29,39 @@
             </button>
         </div>
     </header>
-    <!-- aparece a partir de tener iniciada la sesion -->
-    <nav aria-label="breadcrumb" class="navegador navbar navbar-expand">
-        <ol class="breadcrumb mx-1 my-0">
-            <li class="breadcrumb-item"><button class="bread btn btn-link">Plantas</button></li>
-            <li class="breadcrumb-item"><button class="bread btn btn-link">Aulas</button></li>
-            <li class="breadcrumb-item"><button class="bread btn btn-link">Aula 522</button></li>
-            <li class="breadcrumb-item active"><button class="ultimo btn btn-link text-dark" disabled>Detalles</li>
-        </ol>
-    </nav>
 
     <main class="sticky-top">
+        <!-- aparece a partir de tener iniciada la sesion -->
+        <nav class="navegador navbar navbar-expand ">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ol class="breadcrumb flex-wrap navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="breadcrumb-item">
+                            <button class="bread btn btn-link">Plantas</button>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <button class="bread btn btn-link">Aulas</button>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <button class="bread btn btn-link">Aula 522</button>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <button class="ultimo btn btn-link text-dark" disabled>Detalles</button>
+                        </li>
+                    </ol>
+                    <form class="d-flex">
+                        <input class="buscadorI form-control form-control-sm " type="search" placeholder="Buscar" aria-label="Buscar">
+                        <button class="buscador btn btn-secondary" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
 
+        <!-- Aqui va la vista xD -->
     </main>
     <div class="container-fluid px-0 pt-1">
         <footer class="bg-light text-center text-lg-start fixed-bottom">

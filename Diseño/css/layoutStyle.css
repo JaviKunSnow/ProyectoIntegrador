@@ -77,6 +77,17 @@ header {
     text-decoration: none
 }
 
+.buscador {
+    background-color: #3b705d;
+    border: 0;
+
+}
+
+.buscador:hover {
+    background-color: #4e9078;
+    border: 1px solid #3b705d;
+}
+
 footer>div {
     background-color: #4e9078;
     color: white;
