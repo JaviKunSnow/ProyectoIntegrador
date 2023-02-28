@@ -36,3 +36,19 @@ footer>div {
     background-color: #4e9078;
     color: white;
 }
+
+.navegador {
+    margin-top: 5px;
+    padding-left: 10px;
+    background-color: #adadad;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 11px;
+    color: white;
+    --bs-breadcrumb-divider: '>';
+}
+
+a {
+    color: #4b4b4b;
+}

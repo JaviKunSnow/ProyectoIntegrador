@@ -108,3 +108,9 @@
         Ventanas
     </button>
 </div>
+
+<div class="d-flex flex-wrap justify-content-center mt-2 pt-3">
+    <button class="btn btn-secondary  btn-lg">
+        Detalles
+    </button>
+</div>
