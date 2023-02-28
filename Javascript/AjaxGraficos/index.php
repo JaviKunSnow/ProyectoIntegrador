@@ -26,24 +26,20 @@
     </section>
     <section id="filtrosTabla" class="d-none">
         <form id="form">
+            <input type="search" id="buscador">
             <label for="">fecha inicio</label>
-            <input type="datetime" id="fecha1">
-            <label for="">fecha inicio</label>
-            <input type="datetime" id="fecha1">
+            <input type="datetime-local" id="fecha1">
+            <label for="">fecha final</label>
+            <input type="datetime-local" id="fecha2">
+            <input type="submit" id="enviar" value="filtrar">
         </form>
     </section>
     <section id="secTableSensor" class="d-none">
         <div class="table-responsive">
             <table class="table table-primary">
                 <thead>
-                    <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">fecha</th>
-                        <th scope="col">humedad</th>
-                        <th scope="col">temperatura</th>
-                        <th scope="col">luminosidad</th>
-                        <th scope="col">personas</th>
-                        <th scope="col">idArduino</th>
+                    <tr id="headSensores">
+                        
                     </tr>
                 </thead>
                 <tbody id="cuerpoSensores">
