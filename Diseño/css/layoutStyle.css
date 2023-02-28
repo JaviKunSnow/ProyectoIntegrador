@@ -35,6 +35,7 @@ header {
 footer>div {
     background-color: #4e9078;
     color: white;
+    font-size: 11px;
 }
 
 .navegador {

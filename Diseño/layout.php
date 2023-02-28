@@ -45,7 +45,7 @@
     </main>
     <div class="container-fluid px-0 pt-1">
         <footer class="bg-light text-center text-lg-start fixed-bottom">
-            <div class="text-center p-3">
+            <div class="text-center p-2">
                 ©2023
                 <a class="text-light" href="https://www.claudiomoyano.es/">IES Claudio Moyano - DAW2</a>
             </div>
