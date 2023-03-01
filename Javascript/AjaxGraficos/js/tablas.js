@@ -52,13 +52,7 @@ window.addEventListener("load", async () => {
 
         const tablaSensores = await recogerTablaSensores();
 
-        let propiedadesTablaSensores = Object.keys(tablaSensores[0]);
-    
-        propiedadesTablaSensores.forEach(element => {
-          let th = document.createElement("th");
-          th.appendChild(document.createTextNode(element));
-          headTabla.appendChild(th);
-        });
+        await pintarHead(tablaSensores);
 
         for await(objeto of tablaSensores) {
           await pintarTabla(objeto);
@@ -91,13 +85,7 @@ window.addEventListener("load", async () => {
 
         const tablaActuadores = await recogerTablaActuadores();
 
-        let propiedadesTablaActuadores = Object.keys(tablaActuadores[0]);
-    
-        propiedadesTablaActuadores.forEach(element => {
-          let th = document.createElement("th");
-          th.appendChild(document.createTextNode(element));
-          headTabla.appendChild(th);
-        });
+        await pintarHead(tablaActuadores);
 
         for await(objeto of tablaActuadores) {
           await pintarTabla(objeto);
@@ -122,33 +110,35 @@ window.addEventListener("load", async () => {
 
           if(valor != "" && selector == "todos" && fecha1 == "" && fecha2 == "") {
 
-            const datosByDatosAndDate = await recogerTablaSensoresByDato(valor);
+            const clase = await recogerIdClase(valor);
+              
+            const datosByClass = await recogerTablaSensoresByClase(clase[0].idArduino);
+              
+            await pintarHead(datosByClass);
 
-            let propiedadesTablaActuadores = Object.keys(datosByDatosAndDate[0]);
-
-            propiedadesTablaActuadores.forEach(element => {
-              let th = document.createElement("th");
-              th.appendChild(document.createTextNode(element));
-              headTabla.appendChild(th);
-            });
-
-            for await(objeto of datosByDatosAndDate) {
+            for await(objeto of datosByClass) {
               await pintarTabla(objeto);
             }
 
           } else if(valor == "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
 
-              const datosByDatosAndDate = await recogerTablaSensoresByDato(valor);
+              const datosByDato = await recogerTablaSensoresByDato(selector);
 
-              let propiedadesTablaActuadores = Object.keys(datosByDatosAndDate[0]);
+              await pintarHead(datosByDato);
 
-              propiedadesTablaActuadores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+              for await(objeto of datosByDato) {
+                await pintarTabla(objeto);
+              }
 
-              for await(objeto of datosByDatosAndDate) {
+            } else if(valor != "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
+
+              const clase = await recogerIdClase(valor);
+
+              const datosByDato = await recogerTablaSensoresByClassAndDato(clase[0].idArduino, selector);
+
+              await pintarHead(datosByDato);
+
+              for await(objeto of datosByDato) {
                 await pintarTabla(objeto);
               }
 
@@ -156,13 +146,7 @@ window.addEventListener("load", async () => {
 
               const datosByDate = await recogerTablaSensoresBetweenDate(fecha1, fecha2);
 
-              let propiedadesTablaSensores = Object.keys(datosByDate[0]);
-
-              propiedadesTablaSensores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+              await pintarHead(datosByDate);
 
               for await(objeto of datosByDate) {
                 await pintarTabla(objeto);
@@ -170,15 +154,33 @@ window.addEventListener("load", async () => {
 
             } else if(valor == "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
 
-              const datosByDatosAndDate = await recogerTablaSensoresByDatoAndDate(valor, fecha1, fecha2);
+              const datosByDatosAndDate = await recogerTablaSensoresByDatoAndDate(selector, fecha1, fecha2);
 
-              let propiedadesTablaSensores = Object.keys(datosByDatosAndDate[0]);
+              await pintarHead(datosByDatosAndDate);
 
-              propiedadesTablaSensores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+              for await(objeto of datosByDatosAndDate) {
+                await pintarTabla(objeto);
+              }
+
+            } else if(valor != "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
+
+              const clase = await recogerIdClase(valor);
+
+              const datosByDatosAndDate = await recogerTablaSensoresByClassAndDate(clase[0].idArduino, fecha1, fecha2);
+
+              await pintarHead(datosByDatosAndDate);
+
+              for await(objeto of datosByDatosAndDate) {
+                await pintarTabla(objeto);
+              }
+
+            } else if(valor != "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+
+              const clase = await recogerIdClase(valor);
+
+              const datosByDatosAndDate = await recogerTablaSensoresByClassAndDatoAndBetweenDate(clase[0].idArduino, selector, fecha1, fecha2);
+
+              await pintarHead(datosByDatosAndDate);
 
               for await(objeto of datosByDatosAndDate) {
                 await pintarTabla(objeto);
@@ -188,13 +190,7 @@ window.addEventListener("load", async () => {
 
               const tablaSensores = await recogerTablaSensores();
 
-              let propiedadesTablaSensores = Object.keys(tablaSensores[0]);
-          
-              propiedadesTablaSensores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+              await pintarHead(tablaSensores);
 
               for await(objeto of tablaSensores) {
                 await pintarTabla(objeto);
@@ -205,49 +201,79 @@ window.addEventListener("load", async () => {
             break;
           case verTablaActuadores.classList.contains("active"):
 
-            if(valor != "" && fecha1 == "" && fecha2 == "") {
+          if(valor != "" && selector == "todos" && fecha1 == "" && fecha2 == "") {
 
-              const datosByDatosAndDate = await recogerTablaActuadoresByDato(valor);
+            const clase = await recogerIdClase(valor);
+              
+            const datosByClass = await recogerTablaActuadoresByClase(clase[0].idArduino);
+              
+            await pintarHead(datosByClass);
 
-              let propiedadesTablaActuadores = Object.keys(datosByDatosAndDate[0]);
+            for await(objeto of datosByClass) {
+              await pintarTabla(objeto);
+            }
 
-              propiedadesTablaActuadores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+          } else if(valor == "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
 
-              for await(objeto of datosByDatosAndDate) {
+              const datosByDato = await recogerTablaActuadoresByDato(selector);
+
+              await pintarHead(datosByDato);
+
+              for await(objeto of datosByDato) {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor == "" && fecha1 != "" && fecha2 != "") {
+            } else if(valor != "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
+
+              const clase = await recogerIdClase(valor);
+
+              const datosByDato = await recogerTablaActuadoresByDato(clase[0].idArduino, selector);
+
+              await pintarHead(datosByDato);
+
+              for await(objeto of datosByDato) {
+                await pintarTabla(objeto);
+              }
+
+            } else if(valor == "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
 
               const datosByDate = await recogerTablaActuadoresBetweenDate(fecha1, fecha2);
 
-              let propiedadesTablaActuadores = Object.keys(datosByDate[0]);
-
-              propiedadesTablaActuadores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+              await pintarHead(datosByDate);
 
               for await(objeto of datosByDate) {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && fecha1 != "" && fecha2 != "") {
+            } else if(valor != "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
 
-              const datosByDatosAndDate = await recogerTablaActuadoresByDatoAndDate(valor, fecha1, fecha2);
+              const clase = await recogerIdClase(valor);
 
-              let propiedadesTablaActuadores = Object.keys(datosByDatosAndDate[0]);
+              const datosByDatosAndDate = await recogerTablaActuadoresByClassAndDate(clase[0].idArduino, fecha1, fecha2);
 
-              propiedadesTablaActuadores.forEach(element => {
-                let th = document.createElement("th");
-                th.appendChild(document.createTextNode(element));
-                headTabla.appendChild(th);
-              });
+              await pintarHead(datosByDatosAndDate);
+
+              for await(objeto of datosByDatosAndDate) {
+                await pintarTabla(objeto);
+              }
+
+            } else if(valor == "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+
+              const datosByDatosAndDate = await recogerTablaActuadoresByDatoAndDate(selector, fecha1, fecha2);
+
+              await pintarHead(datosByDatosAndDate);
+
+              for await(objeto of datosByDatosAndDate) {
+                await pintarTabla(objeto);
+              }
+
+            } else if(valor != "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+
+              const clase = await recogerIdClase(valor);
+
+              const datosByDatosAndDate = await recogerTablaActuadoresByClassAndDate(clase[0].idArduino, selector, fecha1, fecha2);
+
+              await pintarHead(datosByDatosAndDate);
 
               for await(objeto of datosByDatosAndDate) {
                 await pintarTabla(objeto);
@@ -257,13 +283,7 @@ window.addEventListener("load", async () => {
                 
                 const tablaActuadores = await recogerTablaActuadores();
 
-                let propiedadesTablaActuadores = Object.keys(tablaActuadores[0]);
-            
-                propiedadesTablaActuadores.forEach(element => {
-                  let th = document.createElement("th");
-                  th.appendChild(document.createTextNode(element));
-                  headTabla.appendChild(th);
-                });
+                await pintarHead(tablaActuadores);
 
                 for await(objeto of tablaActuadores) {
                   await pintarTabla(objeto);
@@ -280,6 +300,17 @@ window.addEventListener("load", async () => {
       })
 
 })
+
+async function pintarHead(datos) {
+
+  let propiedadesTablaSensores = Object.keys(datos[0]);
+
+  propiedadesTablaSensores.forEach(element => {
+    let th = document.createElement("th");
+    th.appendChild(document.createTextNode(element));
+    headTabla.appendChild(th);
+  });
+}
 
 async function pintarTabla(dato) {
   let tr = document.createElement("tr");
@@ -353,6 +384,23 @@ async function recogerTablaSensoresByDato(dato) {
   return await datos.json();
 }
 
+async function recogerTablaSensoresByClassAndDato(clase, dato) {
+  const datos = await fetch(`${SERVER}/sensores?clase=${clase}&datos=${dato}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+    
+  if (!datos.ok) {
+    throw `error${datos.status} ${datos.statusText}`;
+  }
+    
+  return await datos.json();
+}
+
+
+
 async function recogerTablaSensoresBetweenDate(fecha1, fecha2) {
   const datos = await fetch(`${SERVER}/sensores?fecha1=${fecha1}&fecha2=${fecha2}`, {
     method: 'GET',
@@ -383,7 +431,35 @@ async function recogerTablaSensoresByDatoAndDate(dato, fecha1, fecha2) {
   return await datos.json();
 }
 
+async function recogerTablaSensoresByClassAndDate(clase, fecha1, fecha2) {
+  const datos = await fetch(`${SERVER}/sensores?clase=${clase}&fecha1=${fecha1}&fecha2=${fecha2}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+    
+  if (!datos.ok) {
+    throw `error${datos.status} ${datos.statusText}`;
+  }
+    
+  return await datos.json();
+}
 
+async function recogerTablaSensoresByClassAndDatoAndBetweenDate(clase, dato, fecha1, fecha2) {
+  const datos = await fetch(`${SERVER}/sensores?clase=${clase}&datos=${dato}&fecha1=${fecha1}&fecha2=${fecha2}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+    
+  if (!datos.ok) {
+    throw `error${datos.status} ${datos.statusText}`;
+  }
+    
+  return await datos.json();
+}
 
 async function recogerTablaActuadores() {
     const datos = await fetch(`${SERVER}/actuador`, {
