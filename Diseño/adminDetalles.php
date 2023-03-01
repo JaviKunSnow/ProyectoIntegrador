@@ -196,7 +196,11 @@
                     <!-- Filtro de busqueda -->
                     <form class="my-4">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
+                                <label for="input-numerico" class="form-label">Aula</label>
+                                <input type="number" class="form-control" id="input-numerico" name="input-numerico">
+                            </div>
+                            <div class="col-md-6">
                                 <label for="select" class="form-label">Seleccione dato específico</label>
                                 <select class="form-select" id="select" name="select">
                                     <option value="0">-</option>
@@ -206,11 +210,13 @@
                                     <option value="4">Personas</option>
                                 </select>
                             </div>
-                            <div class="col-md-4">
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
                                 <label for="input-fecha1" class="form-label">Fecha y hora inicial</label>
                                 <input type="datetime-local" class="form-control" id="input-fecha1" name="input-fecha1">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label for="input-fecha2" class="form-label">Fecha y hora final</label>
                                 <input type="datetime-local" class="form-control" id="input-fecha2" name="input-fecha2">
                             </div>
