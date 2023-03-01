@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="css/adminStyle.css">
 <link rel="stylesheet" href="css/tipografia.css">
 
+<!-- Carrusel de botones para acceder a cada una de las aulas -->
 <div class="usuario">
     <h2 class="text-center">Aulas</h2>
     <div class="container">

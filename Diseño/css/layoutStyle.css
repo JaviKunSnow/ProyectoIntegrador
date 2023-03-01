@@ -9,7 +9,6 @@ main {
 }
 
 header {
-    /* border-bottom: 2px #3b705d solid; */
     background-color: #3b705d;
     display: flex;
     justify-content: space-between;
@@ -29,6 +28,7 @@ header {
 .boton {
     font-family: 'Tumbly', serif;
     text-align: right;
+
 }
 
 .navegador {

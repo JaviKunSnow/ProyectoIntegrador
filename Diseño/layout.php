@@ -10,6 +10,9 @@
     <link rel="shortcut icon" href="multimedia/favicon.ico" type="image/x-icon">
     <!-- Dependiendo de que pagina sea tendra un css diferente -->
     <link rel="stylesheet" href="css/layoutStyle.css">
+    <link rel="stylesheet" href="css/adminStyle.css">
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <link rel="stylesheet" href="css/userStyle.css">
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
     <title>Layout</title>
@@ -21,7 +24,7 @@
             <img src="multimedia/logo_blanco.png" alt="Logo" class="lg img-fluid px-3">
         </div>
         <!-- Si no esta logueado este boton desaparece -->
-        <div class="boton">
+        <div class="boton align-self-end mb-2">
             <button class="btn text-light" id="logout">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right img-fluid" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
