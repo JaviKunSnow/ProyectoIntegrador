@@ -37,8 +37,26 @@ class sensoresController extends ControladorPadre {
                 self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
             } else {
+
+                if(isset($_GET["datos"]) && count($_GET) == 1) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $sensores = sensoresDAO::findDatos($_GET["datos"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
                 // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
-                if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
+                
+                } else if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 2) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $sensores = sensoresDAO::findDatosBetweenDate($_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
+                
+                } else if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
                     $sensores = sensoresDAO::findDatosSensor($_GET["datos"], $_GET["fecha1"], $_GET["fecha2"]);

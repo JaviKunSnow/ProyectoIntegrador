@@ -11,7 +11,7 @@ class arduinoDAO extends FactoryBD implements DAO {
     }
 
     public static function findByClass($nombre) {
-        $sql = "select * from arduino where nombre = ?;";
+        $sql = "select idArduino from arduino where nombre = ?;";
         $datos = array($nombre);
         $devuelve = parent::ejecuta($sql,$datos);
         $obj = $devuelve->fetchAll(PDO::FETCH_ASSOC);

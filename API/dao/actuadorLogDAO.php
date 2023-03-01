@@ -22,17 +22,25 @@ class actuadorLogDAO extends FactoryBD implements DAO {
         }
     }
 
-    public static function findDatosActuador($dato, $date1, $date2) {
-        $sql = "select * from actuador_log where actuador = ? and fecha between ? and ?;";
-        $datos = array($dato, $date1, $date2);
+    public static function findDatosBetweenDate($date1, $date2) {
+        $sql = "select * from actuador_log where fecha between ? and ?;";
+        $datos = array($date1, $date2);
         $devuelve = parent::ejecuta($sql,$datos);
-        $arrayActuador = $devuelve->fetchAll(PDO::FETCH_ASSOC);
-        return $arrayActuador;
+        $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
+        return $arraySensores;
+    }
+
+    public static function findDatosActuador($dato, $date1, $date2) {
+        $sql = "select idActuador, fecha, ".$dato.", causa, idArduino from sensores where fecha between ? and ?;";
+        $datos = array($date1, $date2);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
+        return $arraySensores;
     }
 
     public static function findDatosActuadorbyIdArduino($dato, $id, $date1, $date2) {
-        $sql = "select * from sensores where actuador = ? and idArduino = ? and fecha between ? and ?;";
-        $datos = array($dato, $id, $date1, $date2);
+        $sql = "select idActuador, fecha, ".$dato.", causa, idArduino from sensores where idArduino = ? and fecha between ? and ?;";
+        $datos = array($id, $date1, $date2);
         $devuelve = parent::ejecuta($sql,$datos);
         $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
         return $arraySensores;

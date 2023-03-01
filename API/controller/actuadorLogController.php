@@ -38,9 +38,18 @@ class actuadorLogController extends ControladorPadre {
 
             } else {
                 
-                if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
+                if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 2) {
 
-                    // llamo al dao de datosActuador para buscar los datos del actuador entre 2 fechas y recojo los datos.
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $actuador = actuadorLogDAO::findDatosBetweenDate($_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($actuador);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
+                
+                } else if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
                     $actuador = actuadorLogDAO::findDatosActuador($_GET["datos"], $_GET["fecha1"], $_GET["fecha2"]);
                     $data = json_encode($actuador);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
@@ -48,7 +57,7 @@ class actuadorLogController extends ControladorPadre {
                 // aqui pregunto si la cuenta de valores del get es 4 y si no estan vacios los datos que recojemos.
                 } else if(isset($_GET["datos"]) && isset($_GET["id"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
 
-                    // llamo al dao de datosActuadorByIdArduino para buscar los datos del actuador entre 2 fechas y por la id del arduino y recojo los datos.
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y por la id del arduino y recojo los datos.
                     $actuador = actuadorLogDAO::findDatosActuadorbyIdArduino($_GET["datos"], $_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
                     $data = json_encode($actuador);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
