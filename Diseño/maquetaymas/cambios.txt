@@ -1,16 +1,16 @@
 vista usuario:
 
-informar si es la fecha de hoy en la principal.
+(Hecho) informar si es la fecha de hoy en la principal.
 En los graficos filtros de ultima semana, mes año(Aunque solo poner el de semana de momento).
 En los graficos un filtro si estas visualizando la ultima semana, puedas ver la semana anterior a ella(OPCIONAL SI DA TIEMPO).
-El boton VER MAS talvez hay que cambiar el texto, pero no hemos encontrado algo mejor para ponerle.
-En usuario mostrar los actuadores como en admin, aunque solo den informacion si estan activos.
+(Hecho) El boton VER MAS talvez hay que cambiar el texto, pero no hemos encontrado algo mejor para ponerle. 
+(Hecho) En usuario mostrar los actuadores como en admin, aunque solo den informacion si estan activos.
 
 vista admin:
 
-Hacer en una vista separada los graficos y tablas como pasa en los usuarios.
-Que la vista de plantas tenga un 3x2 en las bolitas si la vista es cuadrada.
-cambiar el "apagado/encendido" de los actuadores por los nombres de cada uno
+(Hecho) Hacer en una vista separada los graficos y tablas como pasa en los usuarios.
+(Hecho) Que la vista de plantas tenga un 3x2 en las bolitas si la vista es cuadrada.
+(Hecho) cambiar el "apagado/encendido" de los actuadores por los nombres de cada uno
 
 
 GENERAL:
