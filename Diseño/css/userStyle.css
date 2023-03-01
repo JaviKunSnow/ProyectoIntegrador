@@ -3,10 +3,15 @@
 }
 
 h2,
-h3 {
+h3,
+h4 {
     margin-bottom: 50px;
     font-family: 'Orbitron', serif;
     color: #3b705d;
+}
+
+h4 {
+    font-size: larger;
 }
 
 .circle {
@@ -60,7 +65,7 @@ span {
 }
 
 .actuadorIcon {
-    width: 35px;
+    width: 80px;
     margin: 5px;
 }
 
@@ -74,6 +79,10 @@ span {
 /* dependiendo de que actuador este encendido o apagado se le cambia esto */
 .apagado {
     background-color: #8edd8b;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .apagado:hover {
@@ -82,6 +91,10 @@ span {
 
 .encendido {
     background-color: #f8ad96;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .encendido:hover {
