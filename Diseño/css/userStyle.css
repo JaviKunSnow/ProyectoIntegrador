@@ -65,41 +65,27 @@ span {
 }
 
 .actuadorIcon {
-    width: 80px;
+    width: 40px;
     margin: 5px;
+    margin-top: 20px;
 }
 
 .actuadores {
-    color: black;
-    border: 0;
-    margin-left: 150px;
-    margin-right: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 /* dependiendo de que actuador este encendido o apagado se le cambia esto */
 .apagado {
     background-color: #8edd8b;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.apagado:hover {
-    background-color: #99d497;
+    border-radius: 10px;
 }
 
 .encendido {
     background-color: #f8ad96;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
+    border-radius: 10px;
 }
 
-.encendido:hover {
-    background-color: #f1b5a3;
-}
 
 #temperaturaSpan {
     /* Temperatura alta */
@@ -169,6 +155,8 @@ span {
 
 .detalles {
     background-color: #3b705d;
+    padding-left: 90px;
+    padding-right: 90px;
     border: 0;
 }
 

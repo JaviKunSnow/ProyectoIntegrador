@@ -67,7 +67,7 @@
                 </div>
             </div>
         </nav>
-        <h2 class="text-center my-3">Aula 165</h2>
+        <h2 class="text-center my-4">Aula 165</h2>
         <!-- Aqui aparecerá la fecha de hoy -->
         <h4 class="text-center">11-05-2023</h4>
         <div class="usuario d-none d-sm-none d-md-block d-lg-block">
@@ -155,65 +155,47 @@
             </button>
         </div>
 
-        <!-- <div class="actuadores btn-group d-grid gap-2 d-md-flex justify-content-md-end my-5" role="group">
-    <button class="btn apagado">
-        <span class="me-2">
-            <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
-        </span>
-        Ventilador
-    </button>
-    <button class="btn encendido">
-        <span class="me-2">
-            <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
-        </span>
-        Calefacción
-    </button>
-    <button class="btn apagado">
-        <span class="me-2">
-            <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
-        </span>
-        Luces
-    </button>
-    <button class="btn encendido">
-        <span class="me-2">
-            <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
-        </span>
-        Ventanas
-    </button>
-</div> -->
-
-        <div class="d-flex justify-content-center">
-            <div class="btn-group btn-group-lg btn-group-sm mt-5 mb-3" role="group" aria-label="Grupo de botones">
-                <button type="button" class="btn btn-secondary encendido text-dark d-flex row">
-                    <span class="me-2">
-                        <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
-                    </span>
-                    <b>VENTILADOR</b>
-                </button>
-                <button type="button" class="btn btn-secondary apagado text-dark d-flex row">
-                    <span class="me-2">
-                        <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
-                    </span>
-                    <b>CALEFACCIÓN</b>
-                </button>
-                <button type="button" class="btn btn-secondary apagado text-dark d-flex row">
-                    <span class="me-2">
-                        <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
-                    </span>
-                    <b>ILUMINACIÓN</b>
-                </button>
-                <button type="button" class="btn btn-secondary apagado text-dark d-flex row">
-                    <span class="me-2">
-                        <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
-                    </span>
-                    <b>VENTANAS</b>
-                </button>
+        <div class="container mt-5">
+            <div class="row justify-content-center flex-wrap">
+                <div class="actuadores col-6 col-lg-3 mx-2">
+                    <div class="square">
+                        <div class="d-flex flex-column align-items-center justify-content-center apagado">
+                            <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
+                            <p class="text-dark">Ventilador</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="actuadores col-6 col-lg-3 mx-2">
+                    <div class="square">
+                        <div class="d-flex flex-column align-items-center justify-content-center apagado">
+                            <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
+                            <p class="text-dark">Calefacción</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="actuadores col-6 col-lg-3 mx-2">
+                    <div class="square">
+                        <div class="d-flex flex-column align-items-center justify-content-center encendido">
+                            <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
+                            <p class="text-dark">Iluminación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="actuadores col-6 col-lg-3 mx-2">
+                    <div class="square">
+                        <div class="d-flex flex-column align-items-center justify-content-center encendido">
+                            <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
+                            <p class="text-dark">Ventanas</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
 
+
         <div class="d-flex justify-content-center mt-3">
-            <button class="detalles btn btn-secondary btn-block btn-lg w-25">
+            <button class="detalles btn btn-secondary btn-block btn-lg">
                 Detalles
             </button>
         </div>
@@ -230,3 +212,63 @@
 </body>
 
 </html>
+
+
+
+
+
+<!-- <div class="actuadores btn-group d-grid gap-2 d-md-flex justify-content-md-end my-5" role="group">
+            <button class="btn apagado">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
+                </span>
+                Ventilador
+            </button>
+            <button class="btn encendido">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
+                </span>
+                Calefacción
+            </button>
+            <button class="btn apagado">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
+                </span>
+                Luces
+            </button>
+            <button class="btn encendido">
+                <span class="me-2">
+                    <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
+                </span>
+                Ventanas
+            </button>
+        </div> -->
+
+<!-- <div class="d-flex justify-content-center">
+            <div class="btn-group btn-group-lg btn-group-sm mt-5 mb-3" role="group" aria-label="Grupo de botones">
+                <button class="btn btn-secondary text-dark d-flex row encendido mx-4 justify-content-center">
+                    <span class="mt-2">
+                        <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
+                    </span>
+                    Ventilador
+                </button>
+                <button class="btn btn-secondary text-dark d-flex row apagado mx-4 justify-content-center">
+                    <span class="mt-2">
+                        <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
+                    </span>
+                    Calefacción
+                </button>
+                <button class="btn btn-secondary text-dark d-flex row apagado mx-4 justify-content-center">
+                    <span class="mt-2">
+                        <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
+                    </span>
+                    Luz
+                </button>
+                <button class="btn btn-secondary text-dark d-flex row apagado mx-4 justify-content-center">
+                    <span class="mt-2">
+                        <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
+                    </span>
+                    Ventanas
+                </button>
+            </div>
+        </div> -->
