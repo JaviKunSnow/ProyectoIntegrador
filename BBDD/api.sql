@@ -4,7 +4,7 @@ USE api;
 DROP TABLE IF EXISTS `arduino`;
 CREATE TABLE `arduino` (
   `idArduino` int NOT NULL,
-  `nombre` varchar(45) NOT NULL,
+  `nombre` int NOT NULL,
   PRIMARY KEY (`idArduino`),
   UNIQUE KEY `nombre_UNIQUE` (`nombre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -35,9 +35,9 @@ CREATE TABLE `actuador_log` (
   CONSTRAINT `idArduinoAct` FOREIGN KEY (`idArduino`) REFERENCES `arduino` (`idArduino`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-insert into arduino (idArduino, nombre) values (1, "522");
-insert into arduino (idArduino, nombre) values (2, "523");
-insert into arduino (idArduino, nombre) values (3, "524");
+insert into arduino (idArduino, nombre) values (1, 522);
+insert into arduino (idArduino, nombre) values (2, 523);
+insert into arduino (idArduino, nombre) values (3, 524);
 
 ALTER TABLE sensores AUTO_INCREMENT = 1;
 ALTER TABLE actuador_log AUTO_INCREMENT = 1;

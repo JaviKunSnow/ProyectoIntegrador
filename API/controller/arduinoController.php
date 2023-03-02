@@ -28,7 +28,7 @@ class arduinoController extends ControladorPadre {
             if(!$parametros) {
 
                 // aqui recojo todos los sensores con todos sus valores, los paso a un json y los envio.
-                $lista = sensoresDAO::findAll();
+                $lista = arduinoDAO::findAll();
                 $data = json_encode($lista);
                 self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 

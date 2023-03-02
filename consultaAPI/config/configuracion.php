@@ -18,6 +18,7 @@ $controladores = array(
     'login' => './controller/loginController.php',
     'user' => './controller/userController.php',
     'admin' => './controller/adminController.php',
+    'adminAulas' => './controller/adminAulasController.php',
     'adminAula' => './controller/adminAulaController.php'
 );
 
