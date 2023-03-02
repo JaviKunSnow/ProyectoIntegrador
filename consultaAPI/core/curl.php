@@ -14,7 +14,7 @@ function getByClass() {
 
 function getByLastDate($id) {
     $ch = curl_init();
-    $url = "http://".$_SERVER["SERVER_ADDR"]."ProyectoIntegrador/API/api.php/sensores?idClase=".$id."";
+    $url = "http://".$_SERVER["SERVER_ADDR"]."/ProyectoIntegrador/API/api.php/sensores?idClase=".$id."";
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $resultado = curl_exec($ch);

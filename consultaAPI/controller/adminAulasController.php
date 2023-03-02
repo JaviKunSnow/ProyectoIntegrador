@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_REQUEST['enviar'])) {
-    $_SESSION['idAula'] = $_REQUEST['idAula'];
+    $_SESSION['idAula'] = $_REQUEST['idArduino'];
     $_SESSION['vista'] = $vistas['adminAula'];
     $_SESSION['controlador'] = $controladores['adminAula'];
     $_SESSION['ccs'] = $css['user'];
