@@ -1,6 +1,6 @@
 <h2 class="text-center my-4">Aula 165</h2>
 <!-- Aqui aparecerá la fecha de hoy -->
-<h4 class="text-center">11-05-2023</h4>
+<h4 class="text-center"><?echo date('Y-m-d')?></h4>
 
 <!-- Datos de los sensores mas recientes-->
 <div class="usuario d-none d-sm-none d-md-block d-lg-block">
@@ -128,7 +128,9 @@
 
 <!-- Botón para acceder al resto de la informacion del arduino -->
 <div class="d-flex justify-content-center mt-3">
-    <button class="detalles btn btn-secondary btn-block btn-lg">
-        Detalles
-    </button>
+    <form action="./index.php" method="post">
+        <button type="submit" class="detalles btn btn-secondary btn-block btn-lg" name="detalles">
+            Detalles
+        </button>
+    </form>
 </div>

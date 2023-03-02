@@ -19,32 +19,39 @@
              <div class="col-12">
                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="#e33c13">
                      <div class="carousel-inner">
-                         <? $contador = 0;
+                        <? $contador = 0;
+                            $contActive = 0;
 
-                            foreach ($elementos as $key) {
-                                if ($contador == 0) { ?>
-                                 <div class="carousel-item active">
-                                     <div class="row justify-content-center">
-                                     <? } ?>
-                                     <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
-                                         <form action="./index.php" method="post">
-                                            <div class="distortedAulas">
-                                                <input type="hidden" name="idArduino" value="<?echo $key['idArduino']?>">
-                                                <button class="botonAulas btn btn-circle" id="planta1">
-                                                    <div class="mt-3">
-                                                        <h4>AULA <?echo $key['nombre']?></h4>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                         </form>
-                                     </div>
-                                     <? if ($contador == 3) {
-                                            $contador = 0;
-                                        ?>
-                                     </div>
-                                 </div>
-                         <? }
-                                    } ?>
+                            foreach($elementos as $key) {
+                                if($contador == 0) {
+                                    if($contActive == 0) {
+                                        echo '<div class="carousel-item active">';
+                                    } else {
+                                        echo '<div class="carousel-item">';
+                                    }
+                                    echo '<div class="row justify-content-center">';   
+                                    $contActive++; 
+                                    $contador++;
+                                }
+                                    echo '<div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">';
+                                        echo '<form action="./index.php" method="post">';
+                                            echo '<div class="distortedAulas">';
+                                                echo '<input type="hidden" name="idArduino" value="'.$key['idArduino'].'">';
+                                                    echo '<button class="botonAulas btn btn-circle" id="planta1">';
+                                                        echo '<div class="mt-3">';
+                                                            echo '<h4>AULA '.$key['nombre'].'</h4>';
+                                                        echo '</div>';
+                                                    echo '</button>';
+                                                echo '</div>';
+                                            echo '</form>';
+                                        echo '</div>';
+                                if($contador == 3) {
+                                    $contador = 0;
+                                    echo '</div>';
+                                    echo '</div>';
+                                }
+                            }
+                        ?>
                      </div>
                  </div>
              </div>

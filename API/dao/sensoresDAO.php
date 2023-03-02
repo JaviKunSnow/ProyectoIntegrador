@@ -22,6 +22,14 @@ class sensoresDAO extends FactoryBD implements DAO {
         }
     }
 
+    public static function findDatosByLastDate($id) {
+        $sql = "select * from sensores where idArduino = ? order by fecha desc limit 1;";
+        $datos = array($id);
+        $devuelve = parent::ejecuta($sql,$datos);
+        $arraySensores = $devuelve->fetchAll(PDO::FETCH_ASSOC);
+        return $arraySensores;
+    }
+
     public static function findDatos($dato) {
         $sql = "select idSensor, fecha, ".$dato.", idArduino from sensores;";
         $datos = array();

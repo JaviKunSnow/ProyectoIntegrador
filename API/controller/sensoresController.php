@@ -47,6 +47,15 @@ class sensoresController extends ControladorPadre {
 
                 // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
                 
+                } else if(isset($_GET["idClase"]) && count($_GET) == 1) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $sensores = sensoresDAO::findDatosByLastDate($_GET["idClase"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
+                
                 } else if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 2) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
