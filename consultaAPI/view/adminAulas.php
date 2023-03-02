@@ -31,8 +31,8 @@
                                     }
                                     echo '<div class="row justify-content-center">';   
                                     $contActive++; 
-                                    $contador++;
                                 }
+                                $contador++;
                                     echo '<div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">';
                                         echo '<form action="./index.php" method="post">';
                                             echo '<div class="distortedAulas">';
@@ -42,13 +42,13 @@
                                                             echo '<h4>AULA '.$key['nombre'].'</h4>';
                                                         echo '</div>';
                                                     echo '</button>';
-                                                echo '</div>';
-                                            echo '</form>';
-                                        echo '</div>';
+                                            echo '</div>';
+                                        echo '</form>';
+                                    echo '</div>';
                                 if($contador == 3) {
                                     $contador = 0;
                                     echo '</div>';
-                                    echo '</div>';
+                                echo '</div>';
                                 }
                             }
                         ?>
