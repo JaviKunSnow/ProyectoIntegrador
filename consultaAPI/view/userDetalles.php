@@ -1,17 +1,17 @@
 <div class="container mt-4">
     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="grafico-tab" data-bs-toggle="tab" data-bs-target="#grafico" type="submit" role="tab" aria-controls="grafico" aria-selected="true">Gráfico</button>
+            <button class="nav-link active" id="verGrafico" data-bs-toggle="tab" data-bs-target="#grafico" type="submit" role="tab" aria-controls="grafico" aria-selected="true">Gráfico</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tabla1-tab" data-bs-toggle="tab" data-bs-target="#tabla1" type="submit" role="tab" aria-controls="tabla1" aria-selected="false">Sensores</button>
+            <button class="nav-link" id="verTablaSensores" data-bs-toggle="tab" data-bs-target="#tabla1" type="submit" role="tab" aria-controls="tabla1" aria-selected="false">Sensores</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tabla2-tab" data-bs-toggle="tab" data-bs-target="#tabla2" type="submit" role="tab" aria-controls="tabla2" aria-selected="false">Actuadores</button>
+            <button class="nav-link" id="verTablaActuadores" data-bs-toggle="tab" data-bs-target="#tabla2" type="submit" role="tab" aria-controls="tabla2" aria-selected="false">Actuadores</button>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="grafico" role="tabpanel" aria-labelledby="grafico-tab">
+        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="grafico-tab">
             <!-- Filtro de busqueda -->
             <form class="my-4">
                 <div class="d-flex align-items-center">
@@ -31,7 +31,7 @@
         <div class="tab-pane fade" id="tabla1" role="tabpanel" aria-labelledby="tabla1-tab">
             <!-- Filtro de busqueda -->
             <form class="my-4" id="form">
-                <input type="hidden" name="buscador" id="idClase" value="<?echo $_SESSION['idAula']?>">
+                <input type="hidden" name="buscador" id="idClase" value="<? echo $_SESSION['idAula'] ?>">
                 <input type="hidden" name="buscador" id="buscador" value="">
                 <div class="row">
                     <div class="col-md-4">
@@ -55,7 +55,7 @@
                     <div class="col-md-4">
                         <input type="submit" id="enviar" value="filtrar">
                     </div>
-                    
+
                 </div>
             </form>
             <!-- tabla de sensores -->
@@ -64,12 +64,12 @@
                     <table class="table table-striped">
                         <thead>
                             <tr id="headTablaSen">
-                              
+
                             </tr>
                         </thead>
                         <tbody id="cuerpoTablaSen">
                             <tr>
-                                
+
                                 <td class="d-block d-md-none w-auto">
                                     <a href="#submenuSensores1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -116,7 +116,7 @@
                     <div class="col-md-4">
                         <input type="submit" id="enviar" value="filtrar">
                     </div>
-                    
+
                 </div>
             </form>
             <!-- tabla de actuadores -->
@@ -125,7 +125,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr id="headTablaAct">
-                                
+
                             </tr>
                         </thead>
                         <tbody id="cuerpoTablaAct">

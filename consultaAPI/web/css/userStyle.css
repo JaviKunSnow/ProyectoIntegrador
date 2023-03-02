@@ -19,30 +19,6 @@ h4 {
     height: 350px;
 }
 
-
-.distortedTemp,
-.distortedHum,
-.distortedPer {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-.distortedTemp {
-    border: 4px dashed #ec8939;
-}
-
-.distortedHum {
-    border: 4px dashed #3c90f0;
-}
-
-.distortedPer {
-    border: 4px dashed #e385a4;
-}
-
 .btn-circle {
     border: none;
     width: 270px;
@@ -86,65 +62,134 @@ span {
     border-radius: 10px;
 }
 
+.hot2,
+.warm2,
+.cold2,
+.low2,
+.medium2,
+.high2,
+.distortedPer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
 
-#temperaturaSpan {
-    /* Temperatura alta */
-    /* color: #ec3f39; */
-    /* Temperatura normal */
+/* texto temperatura */
+#hot3 {
+    color: #ec3f39;
+}
+
+#warm3 {
     color: #ec8939;
-    /* Temperatura baja */
-    /* color: #ecc239; */
 }
 
-#humedadSpan {
-    /* Humedad alta */
-    /* color: #1d7eee; */
-    /* Humedad normal */
+#cold3 {
+    color: #ecc239;
+}
+
+/* borde temperatura */
+.hot2 {
+    border: 4px dashed #ec3f39;
+}
+
+.warm2 {
+    border: 4px dashed #ec8939;
+}
+
+.cold2 {
+    border: 4px dashed #ecc239;
+}
+
+/* background temperatura */
+#hot {
+    background-color: #ec3f39;
+}
+
+#hot:hover {
+    background-color: #e9544f;
+}
+
+#warm {
+    background-color: #ec8939;
+}
+
+#warm:hover {
+    background-color: #eb9854;
+}
+
+#cold {
+    background-color: #ecc239;
+}
+
+#cold:hover {
+    background-color: #e9c756;
+}
+
+/* texto humedad */
+#low3 {
+    color: #1d7eee;
+}
+
+#medium3 {
     color: #3c90f0;
-    /* Humedad baja */
-    /* color: #89baf1; */
 }
 
+#high3 {
+    color: #89baf1;
+}
+
+/* borde humedad */
+.low2 {
+    border: 4px dashed #1d7eee;
+}
+
+.medium2 {
+    border: 4px dashed #3c90f0;
+}
+
+.high2 {
+    border: 4px dashed #89baf1;
+}
+
+/* background humedad */
+#low {
+    background-color: #1d7eee;
+}
+
+#low:hover {
+    background-color: #378cec;
+}
+
+#medium {
+    background-color: #3c90f0;
+}
+
+#medium:hover {
+    background-color: #5ea3f1;
+}
+
+#high {
+    background-color: #89baf1;
+}
+
+#high:hover {
+    background-color: #a4c6ee;
+}
+
+/* texto personas */
 #personasSpan {
     color: #e385a4;
 }
 
-#temperatura {
-    /* Temperatura alta */
-    /* background-color: #ec3f39; */
-    /* Temperatura normal */
-    background-color: #ec8939;
-    /* Temperatura baja */
-    /* background-color: #ecc239; */
+/* borde personas */
+.distortedPer {
+    border: 4px dashed #e385a4;
 }
 
-#temperatura:hover {
-    /* Temperatura alta */
-    /* background-color: #e9544f; */
-    /* Temperatura normal */
-    background-color: #eb9854;
-    /* Temperatura baja */
-    /* background-color: #e9c756; */
-}
-
-#humedad {
-    /* Humedad alta */
-    /* background-color: #1d7eee; */
-    /* Humedad normal */
-    background-color: #3c90f0;
-    /* Humedad baja */
-    /* background-color: #89baf1; */
-}
-
-#humedad:hover {
-    /* Humedad alta */
-    /* background-color: #378cec; */
-    /* Humedad normal */
-    background-color: #5ea3f1;
-    /* Humedad baja */
-    /* background-color: #a4c6ee; */
-}
-
+/* background personas */
 #personas {
     background-color: #e385a4;
 }

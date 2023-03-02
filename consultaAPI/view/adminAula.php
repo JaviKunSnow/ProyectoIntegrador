@@ -1,37 +1,74 @@
 <h2 class="text-center my-4">Aula 165</h2>
 <!-- Aqui aparecerá la fecha de hoy -->
-<h4 class="text-center"><?echo date('Y-m-d')?></h4>
+<h4 class="text-center"><? echo date('Y-m-d') ?></h4>
 
 <!-- Datos de los sensores mas recientes-->
 <div class="usuario d-none d-sm-none d-md-block d-lg-block">
     <div class="d-flex row justify-content-center align-items-center mx-0">
         <div class="circle d-flex flex-column align-items-center col-md-4">
-            <span class="my-2" id="temperaturaSpan"><?echo $valores['temperatura']?>º</span>
-            <div class="distortedTemp">
-                <button type="submit" class="btn btn-circle" id="temperatura">
+            <? $temperatura_actual = $valores['temperatura'];
+
+            if ($temperatura_actual > 21) {
+                $background_id = 'hot';
+                $border_class = 'hot2';
+                $text_id = 'hot3';
+            } else if ($temperatura_actual >= 19 && $temperatura_actual <= 21) {
+                $background_id = 'warm';
+                $border_class = 'warm2';
+                $text_id = 'warm3';
+            } else {
+                $background_id = 'cold';
+                $border_class = 'cold2';
+                $text_id = 'cold3';
+            }
+            ?>
+            <span class="my-2" id="<?php echo $text_id ?>"><? echo $valores['temperatura'] ?>º</span>
+            <div class="<?php echo $border_class ?>">
+                <button type="submit" class="btn btn-circle" id="<?php echo $background_id ?>">
                     <img src="web/multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
                 </button>
             </div>
         </div>
         <div class="circle d-flex flex-column align-items-center col-md-4">
-            <span class="my-2" id="humedadSpan"><?echo $valores['humedad']?>%</span>
-            <div class="distortedHum">
-                <button type="submit" class="btn btn-circle" id="humedad">
+            <? $humedad_actual = $valores['humedad'];
+
+            if ($humedad_actual >= 0 && $humedad_actual <= 25) {
+                $background_id1 = 'low';
+                $border_class1 = 'low2';
+                $text_id1 = 'low3';
+            } else if ($humedad_actual > 25 && $humedad_actual <= 50) {
+                $background_id1 = 'medium';
+                $border_class1 = 'medium2';
+                $text_id1 = 'medium3';
+            } else {
+                $background_id1 = 'high';
+                $border_class1 = 'high2';
+                $text_id1 = 'high3';
+            }
+            ?>
+            <span class="my-2" id="<?php echo $text_id1 ?>"><? echo $valores['humedad'] ?>%</span>
+            <div class="<?php echo $border_class1 ?>">
+                <button type="submit" class="btn btn-circle" id="<?php echo $background_id1 ?>">
                     <img src="web/multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
                 </button>
             </div>
         </div>
         <div class="circle d-flex flex-column align-items-center col-md-4">
-            <span class="my-2" id="personasSpan"><?echo $valores['personas']?></span>
+            <? $num_personas = $valores['personas'];
+
+            if ($num_personas >= 0 && $num_personas <= 5) {
+                $img_src = 'per3.png';
+            } else if ($num_personas > 5 && $num_personas < 15) {
+                $img_src = 'per2.png';
+            } else {
+                $img_src = 'per1.png';
+            }
+            ?>
+            <span class="my-2" id="personasSpan"><? echo $valores['personas'] ?></span>
             <div class="distortedPer">
                 <button type="submit" class="btn btn-circle" id="personas">
                     <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
-                    <!-- mas de 10 personas -->
-                    <img src="web/multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
-                    <!-- de 5 a 10 personas -->
-                    <!-- <img src="web/multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
-                    <!-- de 0 a 5 personas  -->
-                    <!-- <img src="web/multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                    <img src="web/multimedia/sensores/<? echo $img_src ?>" alt="perIcon" class="sensorIcon">
                 </button>
             </div>
         </div>
@@ -43,9 +80,25 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="temperaturaSpan"><?echo $valores['temperatura']?>º</span>
-                <div class="distortedTemp">
-                    <button type="submit" class="btn btn-circle" id="temperatura">
+                <? $temperatura_actual = $valores['temperatura'];
+
+                if ($temperatura_actual > 21) {
+                    $background_id = 'hot';
+                    $border_class = 'hot2';
+                    $text_id = 'hot3';
+                } else if ($temperatura_actual >= 19 && $temperatura_actual <= 21) {
+                    $background_id = 'warm';
+                    $border_class = 'warm2';
+                    $text_id = 'warm3';
+                } else {
+                    $background_id = 'cold';
+                    $border_class = 'cold2';
+                    $text_id = 'cold3';
+                }
+                ?>
+                <span class="my-2" id="<?php echo $text_id ?>"><? echo $valores['temperatura'] ?>º</span>
+                <div class="<?php echo $border_class ?>">
+                    <button type="submit" class="btn btn-circle" id="<?php echo $background_id ?>">
                         <img src="web/multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
                     </button>
                 </div>
@@ -53,9 +106,25 @@
         </div>
         <div class="carousel-item">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="humedadSpan"><?echo $valores['humedad']?>%</span>
-                <div class="distortedHum">
-                    <button type="submit" class="btn btn-circle" id="humedad">
+                <? $humedad_actual = $valores['humedad'];
+
+                if ($humedad_actual >= 0 && $humedad_actual <= 25) {
+                    $background_id1 = 'low';
+                    $border_class1 = 'low2';
+                    $text_id1 = 'low3';
+                } else if ($humedad_actual > 25 && $humedad_actual <= 50) {
+                    $background_id1 = 'medium';
+                    $border_class1 = 'medium2';
+                    $text_id1 = 'medium3';
+                } else {
+                    $background_id1 = 'high';
+                    $border_class1 = 'high2';
+                    $text_id1 = 'high3';
+                }
+                ?>
+                <span class="my-2" id="<?php echo $text_id1 ?>"><? echo $valores['humedad'] ?>%</span>
+                <div class="<?php echo $border_class1 ?>">
+                    <button type="submit" class="btn btn-circle" id="<?php echo $background_id1 ?>">
                         <img src="web/multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
                     </button>
                 </div>
@@ -63,16 +132,21 @@
         </div>
         <div class="carousel-item">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="personasSpan"><?echo $valores['personas']?></span>
+                <? $num_personas = $valores['personas'];
+
+                if ($num_personas >= 0 && $num_personas <= 5) {
+                    $img_src = 'per3.png';
+                } else if ($num_personas > 5 && $num_personas < 15) {
+                    $img_src = 'per2.png';
+                } else {
+                    $img_src = 'per1.png';
+                }
+                ?>
+                <span class="my-2" id="personasSpan"><? echo $valores['personas'] ?></span>
                 <div class="distortedPer">
                     <button type="submit" class="btn btn-circle" id="personas">
                         <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
-                        <!-- mas de 10 personas -->
-                        <img src="web/multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
-                        <!-- de 5 a 10 personas -->
-                        <!-- <img src="web/multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
-                        <!-- de 0 a 5 personas  -->
-                        <!-- <img src="web/multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                        <img src="web/multimedia/sensores/<? echo $img_src ?>" alt="perIcon" class="sensorIcon">
                     </button>
                 </div>
             </div>
