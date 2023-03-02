@@ -37,6 +37,7 @@
                                         echo '<form action="./index.php" method="post">';
                                             echo '<div class="distortedAulas">';
                                                 echo '<input type="hidden" name="idArduino" value="'.$key['idArduino'].'">';
+                                                echo '<input type="hidden" name="nomClase" value="'.$key['nombre'].'">';
                                                     echo '<button type="submit" class="botonAulas btn btn-circle" name="enviar">';
                                                         echo '<div class="mt-3">';
                                                             echo '<h4>AULA '.$key['nombre'].'</h4>';

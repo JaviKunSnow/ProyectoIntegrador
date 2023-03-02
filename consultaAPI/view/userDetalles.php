@@ -11,7 +11,7 @@
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="grafico-tab">
+        <div class="tab-pane fade show active" id="graficoTab" role="tabpanel" aria-labelledby="grafico-tab">
             <!-- Filtro de busqueda -->
             <form class="my-4">
                 <div class="d-flex align-items-center">
@@ -26,10 +26,13 @@
                 </div>
             </form>
             <!-- gráficos -->
-            <canvas id="grafico"></canvas>
+            <div id="divGraf">
+                <canvas id="grafico"></canvas>
+            </div>
         </div>
         <div class="tab-pane fade" id="tabla1" role="tabpanel" aria-labelledby="tabla1-tab">
             <!-- Filtro de busqueda -->
+            <input type="hidden" name="buscador" id="idClase" value="<?echo $_SESSION['idAula']?>">
             <form class="my-4" id="form">
                 <input type="hidden" name="buscador" id="idClase" value="<? echo $_SESSION['idAula'] ?>">
                 <input type="hidden" name="buscador" id="buscador" value="">
@@ -92,8 +95,8 @@
         </div>
         <div class="tab-pane fade" id="tabla2" role="tabpanel" aria-labelledby="tabla2-tab">
             <!-- Filtro de busqueda -->
-            <form class="my-4" id="form">
-                <input type="hidden" name="buscador" id="buscador2" value="">
+            <form class="my-4" id="formAct">
+                <input type="hidden" name="buscador" id="buscadorAct" value="<? echo $_SESSION['nomClase']?>">
                 <div class="row">
                     <div class="col-md-4">
                         <label for="select" class="form-label">Seleccione dato específico</label>
@@ -107,11 +110,11 @@
                     </div>
                     <div class="col-md-4">
                         <label for="input-fecha1" class="form-label">Fecha y hora inicial</label>
-                        <input type="datetime-local" class="form-control" id="fecha1" name="fecha1">
+                        <input type="datetime-local" class="form-control" id="fecha1Act" name="fecha1Act">
                     </div>
                     <div class="col-md-4">
                         <label for="input-fecha2" class="form-label">Fecha y hora final</label>
-                        <input type="datetime-local" class="form-control" id="fecha2" name="fecha2">
+                        <input type="datetime-local" class="form-control" id="fecha2Act" name="fecha2Act">
                     </div>
                     <div class="col-md-4">
                         <input type="submit" id="enviar" value="filtrar">

@@ -18,9 +18,13 @@ if(isset($_REQUEST["enviar"])) {
                 if(estaValidado() && esAdmin()) {
                     $_SESSION['vista'] = $vistas['adminPlantas'];
                     $_SESSION['controlador'] = $controladores['admin'];
+                    $_SESSION['pagina'] = 'Plantas';
                     $_SESSION['css'] = $css['admin'];
                 } else {
+                    $acceso = AccederDAO::findById($usuario->idUsuario);
+                    $_SESSION['idAula'] = $acceso->idArduino;
                     $_SESSION['vista'] = $vistas['userAula'];
+                    $_SESSION['pagina'] = 'Aula';
                     $_SESSION['controlador'] = $controladores['user'];
                     $_SESSION['css'] = $css['user'];
                 }

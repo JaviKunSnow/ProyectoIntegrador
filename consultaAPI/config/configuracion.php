@@ -9,9 +9,11 @@ require_once './core/funciones.php';
 
 // modelo DAO y clases
 require_once './model/usuario.php';
+require_once './model/acceder.php';
 require_once './dao/DAO.php';
 require_once './dao/factoryBD.php';
 require_once './dao/usuarioDAO.php';
+require_once './dao/accederDAO.php';
 
 // controladores
 $controladores = array(
@@ -41,3 +43,15 @@ $css = array(
     'user' => 'web/css/userStyle.css',
     'detalles' => 'web/css/detallesStyle.css'
 );
+
+// migas de pan
+
+$migas = array(
+    'plantas' => 'Plantas',
+    'aulas' => 'Aulas',
+    'aula' => '',
+    'detalles' => 'Detalles'
+);
+
+?>
+

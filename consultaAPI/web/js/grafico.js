@@ -1,5 +1,6 @@
 
 const ctx = document.getElementById("grafico");
+const graf = document.getElementById("divGraf");
 
 const humedad = [];
 const temperatura = [];
@@ -107,6 +108,8 @@ async function graficoSemana(semana) {
       data: data,
       }
     );
+
+    ctx.removeAttribute('aria-labelledby');
     
 }
 

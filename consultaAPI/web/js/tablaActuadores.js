@@ -29,17 +29,17 @@ window.addEventListener("load", async () => {
 
         }
 
-  document.getElementById("form").addEventListener("submit", async (e) => {
+  document.getElementById("formAct").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    let valor = document.getElementById("buscador").value;
+    let valor = document.getElementById("buscadorAct").value;
     let selector = selectorInpt2.value;
-    let fecha1 = document.getElementById("fecha1").value;
+    let fecha1 = document.getElementById("fecha1Act").value;
     fecha1 = fecha1.replace("T", " ");
-    let fecha2 = document.getElementById("fecha2").value;
+    let fecha2 = document.getElementById("fecha2Act").value;
     fecha2 = fecha2.replace("T", " ");
-    cuerpoTablaSen.innerHTML = "";
-    headTablaSen.innerHTML = "";
+    cuerpoTabla.innerHTML = "";
+    headTabla.innerHTML = "";
 
     if(valor != "" && selector == "Todos" && fecha1 == "" && fecha2 == "") {
 

@@ -30,7 +30,12 @@ if(isset($_REQUEST['planta1'])) {
     $_SESSION['controlador'] = $controladores['adminAulas'];
     require_once $_SESSION['controlador'];
     
-} else {
+} else if(isset($_REQUEST['todos'])){
+    
+    $_SESSION['vista'] = $vistas['adminDetalles'];
+    $_SESSION['controlador'] = $controladores['adminAula'];
+    $_SESSION['css'] = $css['detalles'];
+    require_once $_SESSION['controlador'];
 
 }
 
