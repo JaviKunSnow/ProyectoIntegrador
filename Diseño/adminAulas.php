@@ -1,3 +1,8 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/adminStyle.css">
+<link rel="stylesheet" href="css/tipografia.css">
+
 <!-- Carrusel de botones para acceder a cada una de las aulas -->
 <div class="usuario">
     <h2 class="text-center">Aulas</h2>
@@ -22,6 +27,7 @@
                         <div class="carousel-item active">
                             <div class="row justify-content-center">
                                 <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
+                                <form action="" method="post">
                                     <div class="distortedAulas">
                                         <button class="botonAulas btn btn-circle" id="planta1">
                                             <div class="mt-3">
@@ -29,6 +35,7 @@
                                             </div>
                                         </button>
                                     </div>
+                                </form>
                                 </div>
                                 <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
                                     <div class="distortedAulas">

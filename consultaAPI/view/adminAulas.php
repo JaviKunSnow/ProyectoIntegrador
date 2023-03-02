@@ -38,10 +38,10 @@
                                          <div class="circleAulas col-12 col-md-4 col-sm-12 mb-3">
                                             <form action="./index.php" method="post">
                                                 <div class="distortedAulas">
-                                                    <input type="hidden" name="idAula" value="<?echo $elemento->idArduino?>">
+                                                    <input type="hidden" name="idAula" value="<?echo $elemento['idArduino']?>">
                                                     <button type="input" class="botonAulas btn btn-circle" name="recogerAula">
                                                         <div class="mt-3">
-                                                            <h4>AULA <? echo $elemento->nombre ?></h4>
+                                                            <h4>AULA <? echo $elemento['nombre'] ?></h4>
                                                         </div>
                                                     </button>
                                                 </div>

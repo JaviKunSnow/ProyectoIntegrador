@@ -7,7 +7,6 @@ if(isset($_REQUEST['enviar'])) {
     require_once $_SESSION['controlador'];
 } else {
     $elementos = getByClass();
-    
 }
 
 
