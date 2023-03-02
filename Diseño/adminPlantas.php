@@ -60,3 +60,10 @@
         </div>
     </div>
 </div>
+
+<!-- Botón para acceder al resto de la informacion del arduino -->
+<div class="d-flex justify-content-center mt-3">
+    <button class="detalles btn btn-secondary btn-block btn-lg">
+        Detalles
+    </button>
+</div>
