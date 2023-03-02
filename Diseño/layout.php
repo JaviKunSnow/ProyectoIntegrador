@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/adminStyle.css">
     <link rel="stylesheet" href="css/loginStyle.css">
     <link rel="stylesheet" href="css/userStyle.css">
+    <link rel="stylesheet" href="css/detallesStyle.css">
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
     <title>Layout</title>
@@ -67,6 +68,170 @@
         </div>
 
         <!-- Aqui va la vista xD -->
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                        <th>Columna 3</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">35%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">45%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">75%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-table-cell w-auto">10%</td>
+                        <td class="d-none d-md-table-cell w-auto">200</td>
+                        <td class="d-none d-md-table-cell w-auto">5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+        <script>
+            // Obtén la matriz de filas de la tabla
+            var tableRows = document.querySelectorAll('#table-body tr');
+
+            // Divide la matriz de filas en secciones de 7 filas cada una
+            var tableSections = [];
+            for (var i = 0; i < tableRows.length; i += 7) {
+                tableSections.push(tableRows.slice(i, i + 7));
+            }
+
+            // Muestra la primera página de la tabla al cargar la página
+            showTablePage(0);
+
+            // Agrega un evento de clic a cada elemento de la lista de páginas
+            var pageLinks = document.querySelectorAll('.page-link');
+            for (var i = 0; i < pageLinks.length; i++) {
+                pageLinks[i].addEventListener('click', function() {
+                    // Obtiene el número de página a la que se hace clic
+                    var pageNumber = parseInt(this.innerHTML) - 1;
+                    // Muestra la página correspondiente de la tabla
+                    showTablePage(pageNumber);
+                });
+            }
+
+            // Func
+        </script>
     </main>
     <div class="container-fluid px-0 pt-1">
         <footer class="bg-light text-center text-lg-start fixed-bottom">
