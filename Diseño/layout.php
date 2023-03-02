@@ -36,7 +36,7 @@
 
     <main class="sticky-top">
         <!-- aparece a partir de tener iniciada la sesion -->
-        <nav class="navegador navbar navbar-expand ">
+        <div class="navegador navbar navbar-expand ">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ol class="breadcrumb flex-wrap navbar-nav me-auto mb-2 mb-lg-0">
@@ -64,7 +64,7 @@
                     </form>
                 </div>
             </div>
-        </nav>
+        </div>
 
         <!-- Aqui va la vista xD -->
     </main>
