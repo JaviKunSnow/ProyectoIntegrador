@@ -9,7 +9,7 @@
             <span class="my-2" id="temperaturaSpan">25 º</span>
             <div class="distortedTemp">
                 <button type="submit" class="btn btn-circle" id="temperatura">
-                    <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
+                    <img src="web/multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
                 </button>
             </div>
         </div>
@@ -17,7 +17,7 @@
             <span class="my-2" id="humedadSpan">100%</span>
             <div class="distortedHum">
                 <button type="submit" class="btn btn-circle" id="humedad">
-                    <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
+                    <img src="web/multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
                 </button>
             </div>
         </div>
@@ -27,11 +27,11 @@
                 <button type="submit" class="btn btn-circle" id="personas">
                     <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
                     <!-- mas de 10 personas -->
-                    <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                    <img src="web/multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
                     <!-- de 5 a 10 personas -->
-                    <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
+                    <!-- <img src="web/multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
                     <!-- de 0 a 5 personas  -->
-                    <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                    <!-- <img src="web/multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
                 </button>
             </div>
         </div>
@@ -46,7 +46,7 @@
                 <span class="my-2" id="temperaturaSpan">25 º</span>
                 <div class="distortedTemp">
                     <button type="submit" class="btn btn-circle" id="temperatura">
-                        <img src="./multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
+                        <img src="web/multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
                     </button>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <span class="my-2" id="humedadSpan">10%</span>
                 <div class="distortedHum">
                     <button type="submit" class="btn btn-circle" id="humedad">
-                        <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
+                        <img src="web/multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
                     </button>
                 </div>
             </div>
@@ -68,11 +68,11 @@
                     <button type="submit" class="btn btn-circle" id="personas">
                         <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
                         <!-- mas de 10 personas -->
-                        <img src="./multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
+                        <img src="web/multimedia/sensores/per1.png" alt="perIcon" class="sensorIcon">
                         <!-- de 5 a 10 personas -->
-                        <!-- <img src="./multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
+                        <!-- <img src="web/multimedia/sensores/per2.png" alt="perIcon" class="sensorIcon"> -->
                         <!-- de 0 a 5 personas  -->
-                        <!-- <img src="./multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
+                        <!-- <img src="web/multimedia/sensores/per3.png" alt="perIcon" class="sensorIcon"> -->
                     </button>
                 </div>
             </div>
@@ -94,7 +94,7 @@
         <div class="actuadores col-6 col-lg-3 mx-2">
             <div class="square">
                 <div class="d-flex flex-column align-items-center justify-content-center apagado">
-                    <img src="./multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
+                    <img src="web/multimedia/actuadores/fan.png" alt="ventIcon" class="actuadorIcon">
                     <p class="text-dark">Ventilador</p>
                 </div>
             </div>
@@ -102,7 +102,7 @@
         <div class="actuadores col-6 col-lg-3 mx-2">
             <div class="square">
                 <div class="d-flex flex-column align-items-center justify-content-center apagado">
-                    <img src="./multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
+                    <img src="web/multimedia/actuadores/heating.png" alt="caleIcon" class="actuadorIcon">
                     <p class="text-dark">Calefacción</p>
                 </div>
             </div>
@@ -110,7 +110,7 @@
         <div class="actuadores col-6 col-lg-3 mx-2">
             <div class="square">
                 <div class="d-flex flex-column align-items-center justify-content-center encendido">
-                    <img src="./multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
+                    <img src="web/multimedia/actuadores/idea.png" alt="luzIcon" class="actuadorIcon">
                     <p class="text-dark">Iluminación</p>
                 </div>
             </div>
@@ -118,7 +118,7 @@
         <div class="actuadores col-6 col-lg-3 mx-2">
             <div class="square">
                 <div class="d-flex flex-column align-items-center justify-content-center encendido">
-                    <img src="./multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
+                    <img src="web/multimedia/actuadores/doors.png" alt="ventaIcon" class="actuadorIcon">
                     <p class="text-dark">Ventanas</p>
                 </div>
             </div>
