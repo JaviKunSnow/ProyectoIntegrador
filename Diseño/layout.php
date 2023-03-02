@@ -17,6 +17,30 @@
     <!-- Esta se mantiene para todas la paginas ya que incluye la tipografia especifica -->
     <link rel="stylesheet" href="css/tipografia.css">
     <title>Layout</title>
+    <script>
+        // Obtén la matriz de filas de la tabla
+        var tableRows = document.querySelectorAll('#table-body tr');
+
+        // Divide la matriz de filas en secciones de 7 filas cada una
+        var tableSections = [];
+        for (var i = 0; i < tableRows.length; i += 7) {
+            tableSections.push(tableRows.slice(i, i + 7));
+        }
+
+        // Muestra la primera página de la tabla al cargar la página
+        showTablePage(0);
+
+        // Agrega un evento de clic a cada elemento de la lista de páginas
+        var pageLinks = document.querySelectorAll('.page-link');
+        for (var i = 0; i < pageLinks.length; i++) {
+            pageLinks[i].addEventListener('click', function() {
+                // Obtiene el número de página a la que se hace clic
+                var pageNumber = parseInt(this.innerHTML) - 1;
+                // Muestra la página correspondiente de la tabla
+                showTablePage(pageNumber);
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -205,33 +229,6 @@
                 </li>
             </ul>
         </nav>
-
-        <script>
-            // Obtén la matriz de filas de la tabla
-            var tableRows = document.querySelectorAll('#table-body tr');
-
-            // Divide la matriz de filas en secciones de 7 filas cada una
-            var tableSections = [];
-            for (var i = 0; i < tableRows.length; i += 7) {
-                tableSections.push(tableRows.slice(i, i + 7));
-            }
-
-            // Muestra la primera página de la tabla al cargar la página
-            showTablePage(0);
-
-            // Agrega un evento de clic a cada elemento de la lista de páginas
-            var pageLinks = document.querySelectorAll('.page-link');
-            for (var i = 0; i < pageLinks.length; i++) {
-                pageLinks[i].addEventListener('click', function() {
-                    // Obtiene el número de página a la que se hace clic
-                    var pageNumber = parseInt(this.innerHTML) - 1;
-                    // Muestra la página correspondiente de la tabla
-                    showTablePage(pageNumber);
-                });
-            }
-
-            // Func
-        </script>
     </main>
     <div class="container-fluid px-0 pt-1">
         <footer class="bg-light text-center text-lg-start fixed-bottom">
