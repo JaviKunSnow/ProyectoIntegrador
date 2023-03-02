@@ -38,11 +38,29 @@ class actuadorLogController extends ControladorPadre {
 
             } else {
                 
-                if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 2) {
+                if(isset($_GET["datos"]) && count($_GET) == 1) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
-                    $actuador = actuadorLogDAO::findDatosBetweenDate($_GET["fecha1"], $_GET["fecha2"]);
-                    $data = json_encode($actuador);
+                    $sensores = actuadorLogDAO::findDatos($_GET["datos"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
+                
+                } else if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 2) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $sensores = actuadorLogDAO::findDatosBetweenDate($_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
+                
+                } else if(isset($_GET["datos"]) && isset($_GET["clase"]) && count($_GET) == 2) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $sensores = actuadorLogDAO::findDatosById($_GET["datos"], $_GET["clase"]);
+                    $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
                 // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
@@ -50,26 +68,35 @@ class actuadorLogController extends ControladorPadre {
                 } else if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
-                    $actuador = actuadorLogDAO::findDatosActuador($_GET["datos"], $_GET["fecha1"], $_GET["fecha2"]);
-                    $data = json_encode($actuador);
+                    $sensores = actuadorLogDAO::findDatosActuador($_GET["datos"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
                 // aqui pregunto si la cuenta de valores del get es 4 y si no estan vacios los datos que recojemos.
-                } else if(isset($_GET["datos"]) && isset($_GET["id"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
+                } else if(isset($_GET["clase"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
+
+                    // llamo al dao de datosSensorById para buscar los datos del sensor entre 2 fechas y la id del arduino.
+                    $sensores = actuadorLogDAO::findDatosActuadorById($_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 4 y si no estan vacios los datos que recojemos.
+                } else if(isset($_GET["datos"]) && isset($_GET["clase"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y por la id del arduino y recojo los datos.
-                    $actuador = actuadorLogDAO::findDatosActuadorbyIdArduino($_GET["datos"], $_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
-                    $data = json_encode($actuador);
+                    $sensores = actuadorLogDAO::findDatosActuadorbyIdAndDate($_GET["datos"], $_GET["clase"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
                 // recojo los datos de la clase, que sera la id del arduino.
                 } else if(isset($_GET["clase"]) && count($_GET) == 1) {
 
                     // recojo y envio los datos de la clase correspondiente por la id que le hemos pasado.
-                    $actuador = actuadorLogDAO::findByIdArduino($_GET['clase']);
-                    $data = json_encode($actuador);
+                    $sensores = actuadorLogDAO::findByIdArduino($_GET['clase']);
+                    $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
+                // pregunto si el valor de get no esta vacio y pregunto si ese valor es "semana".
                 }
             }
         }

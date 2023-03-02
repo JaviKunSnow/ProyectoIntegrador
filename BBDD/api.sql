@@ -40,7 +40,7 @@ insert into arduino (idArduino, nombre) values (2, "523");
 insert into arduino (idArduino, nombre) values (3, "524");
 
 ALTER TABLE sensores AUTO_INCREMENT = 1;
-
+ALTER TABLE actuador_log AUTO_INCREMENT = 1;
 
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2022-12-29 08:00:15', 90.4, 15.5, 700, 20, 2);
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-01-5 08:00:15', 46.4, 15.5, 700, 20, 2);
@@ -82,7 +82,11 @@ insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArdu
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-19 08:00:10', 61.4, 2.2, 900, 12, 2);
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-19 08:00:15', 46.4, 15.5, 700, 20, 2);
 
-insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-20 08:00:15', 46.4, 15.5, 700, 20, 2);
-insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-21 08:00:15', 46.4, 15.5, 700, 20, 2);
-insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-22 08:00:15', 46.4, 15.5, 700, 20, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-28 08:00:15', 46.4, 15.5, 700, 20, 1);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-03-01 08:00:15', 46.4, 15.5, 700, 20, 1);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-03-02 08:00:15', 46.4, 15.5, 700, 20, 1);
 
+insert into actuador_log(fecha, actuador, causa, idArduino) values ('2023-02-28 08:00:15', 'ventilador', 'el tiempo', 1);
+insert into actuador_log(fecha, actuador, causa, idArduino) values ('2023-03-05 08:00:15', 'calefaccion', 'el tiempo', 2);
+insert into actuador_log(fecha, actuador, causa, idArduino) values ('2023-03-10 08:00:15', 'luces', 'el tiempo', 3);
+insert into actuador_log(fecha, actuador, causa, idArduino) values ('2023-03-12 08:00:15', 'ventana', 'el tiempo', 1);

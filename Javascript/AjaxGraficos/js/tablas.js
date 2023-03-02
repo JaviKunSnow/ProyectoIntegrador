@@ -1,3 +1,5 @@
+
+
 const secGrafico = document.getElementById("secGrafico");
 const secTabla = document.getElementById("secTabla");
 const filtrosTablas = document.getElementById("filtrosTabla");
@@ -22,9 +24,7 @@ window.addEventListener("load", async () => {
         verTablaActuadores.classList.remove("active");
         verGrafico.classList.add("active");
 
-        secGrafico.className = "d-block";
-        secTabla.className = "d-none";
-        filtrosTablas.className = "d-none";
+        await cambiarVista("d-block", "d-none", "d-none");
     
       })
     
@@ -35,13 +35,7 @@ window.addEventListener("load", async () => {
         verTablaActuadores.classList.remove("active");
         verTablaSensores.classList.add("active");
 
-        secGrafico.className = "d-none";
-        secTabla.className = "d-block";
-        filtrosTablas.className = "d-block";
-
-        headTabla.innerHTML = "";
-        cuerpoTabla.innerHTML = "";
-        selectorInpt.innerHTML = "";
+        await cambiarVista("d-none", "d-block", "d-block");
 
         sensoresArray.forEach(element => {
           let option = document.createElement("option");
@@ -68,13 +62,7 @@ window.addEventListener("load", async () => {
         verGrafico.classList.remove("active");
         verTablaActuadores.classList.add("active");
         
-        secGrafico.className = "d-none";
-        secTabla.className = "d-block";
-        filtrosTablas.className = "d-block";
-
-        headTabla.innerHTML = "";
-        cuerpoTabla.innerHTML = "";
-        selectorInpt.innerHTML = "";
+        await cambiarVista("d-none", "d-block", "d-block");
 
         actuadoresArray.forEach(element => {
           let option = document.createElement("option");
@@ -108,7 +96,7 @@ window.addEventListener("load", async () => {
         switch (true) {
           case verTablaSensores.classList.contains("active"):
 
-          if(valor != "" && selector == "todos" && fecha1 == "" && fecha2 == "") {
+          if(valor != "" && selector == "Todos" && fecha1 == "" && fecha2 == "") {
 
             const clase = await recogerIdClase(valor);
               
@@ -120,7 +108,7 @@ window.addEventListener("load", async () => {
               await pintarTabla(objeto);
             }
 
-          } else if(valor == "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
+          } else if(valor == "" && selector != "Todos" && fecha1 == "" && fecha2 == "") {
 
               const datosByDato = await recogerTablaSensoresByDato(selector);
 
@@ -130,7 +118,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
+            } else if(valor != "" && selector != "Todos" && fecha1 == "" && fecha2 == "") {
 
               const clase = await recogerIdClase(valor);
 
@@ -142,7 +130,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor == "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor == "" && selector == "Todos" && fecha1 != "" && fecha2 != "") {
 
               const datosByDate = await recogerTablaSensoresBetweenDate(fecha1, fecha2);
 
@@ -152,7 +140,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor == "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor == "" && selector != "Todos" && fecha1 != "" && fecha2 != "") {
 
               const datosByDatosAndDate = await recogerTablaSensoresByDatoAndDate(selector, fecha1, fecha2);
 
@@ -162,7 +150,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor != "" && selector == "Todos" && fecha1 != "" && fecha2 != "") {
 
               const clase = await recogerIdClase(valor);
 
@@ -174,7 +162,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor != "" && selector != "Todos" && fecha1 != "" && fecha2 != "") {
 
               const clase = await recogerIdClase(valor);
 
@@ -201,7 +189,7 @@ window.addEventListener("load", async () => {
             break;
           case verTablaActuadores.classList.contains("active"):
 
-          if(valor != "" && selector == "todos" && fecha1 == "" && fecha2 == "") {
+          if(valor != "" && selector == "Todos" && fecha1 == "" && fecha2 == "") {
 
             const clase = await recogerIdClase(valor);
               
@@ -213,7 +201,7 @@ window.addEventListener("load", async () => {
               await pintarTabla(objeto);
             }
 
-          } else if(valor == "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
+          } else if(valor == "" && selector != "Todos" && fecha1 == "" && fecha2 == "") {
 
               const datosByDato = await recogerTablaActuadoresByDato(selector);
 
@@ -223,11 +211,11 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && selector != "todos" && fecha1 == "" && fecha2 == "") {
+            } else if(valor != "" && selector != "Todos" && fecha1 == "" && fecha2 == "") {
 
               const clase = await recogerIdClase(valor);
 
-              const datosByDato = await recogerTablaActuadoresByDato(clase[0].idArduino, selector);
+              const datosByDato = await recogerTablaActuadoresByClassAndDato(clase[0].idArduino, selector);
 
               await pintarHead(datosByDato);
 
@@ -235,7 +223,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor == "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor == "" && selector == "Todos" && fecha1 != "" && fecha2 != "") {
 
               const datosByDate = await recogerTablaActuadoresBetweenDate(fecha1, fecha2);
 
@@ -245,7 +233,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && selector == "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor != "" && selector == "Todos" && fecha1 != "" && fecha2 != "") {
 
               const clase = await recogerIdClase(valor);
 
@@ -257,7 +245,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor == "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor == "" && selector != "Todos" && fecha1 != "" && fecha2 != "") {
 
               const datosByDatosAndDate = await recogerTablaActuadoresByDatoAndDate(selector, fecha1, fecha2);
 
@@ -267,7 +255,7 @@ window.addEventListener("load", async () => {
                 await pintarTabla(objeto);
               }
 
-            } else if(valor != "" && selector != "todos" && fecha1 != "" && fecha2 != "") {
+            } else if(valor != "" && selector != "Todos" && fecha1 != "" && fecha2 != "") {
 
               const clase = await recogerIdClase(valor);
 
@@ -300,6 +288,16 @@ window.addEventListener("load", async () => {
       })
 
 })
+
+async function cambiarVista(grafico, tablaSen, tablaAct) {
+  secGrafico.className = grafico;
+  secTabla.className = tablaSen;
+  filtrosTablas.className = tablaAct;
+
+  headTabla.innerHTML = "";
+  cuerpoTabla.innerHTML = "";
+  selectorInpt.innerHTML = "";
+}
 
 async function pintarHead(datos) {
 
@@ -399,8 +397,6 @@ async function recogerTablaSensoresByClassAndDato(clase, dato) {
   return await datos.json();
 }
 
-
-
 async function recogerTablaSensoresBetweenDate(fecha1, fecha2) {
   const datos = await fetch(`${SERVER}/sensores?fecha1=${fecha1}&fecha2=${fecha2}`, {
     method: 'GET',
@@ -461,6 +457,8 @@ async function recogerTablaSensoresByClassAndDatoAndBetweenDate(clase, dato, fec
   return await datos.json();
 }
 
+// ACTUADORES
+
 async function recogerTablaActuadores() {
     const datos = await fetch(`${SERVER}/actuador`, {
       method: 'GET',
@@ -491,8 +489,23 @@ async function recogerTablaActuadoresByClase(clase) {
   return await datos.json();
 }
 
-async function recogerTablaActuadorByDato(dato) {
+async function recogerTablaActuadoresByDato(dato) {
   const datos = await fetch(`${SERVER}/actuador?datos=${dato}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+    
+  if (!datos.ok) {
+    throw `error${datos.status} ${datos.statusText}`;
+  }
+    
+  return await datos.json();
+}
+
+async function recogerTablaActuadoresByClassAndDato(clase, dato) {
+  const datos = await fetch(`${SERVER}/actuador?clase=${clase}&datos=${dato}`, {
     method: 'GET',
     headers: {
       'content-type': 'application/json'
@@ -523,6 +536,36 @@ async function recogerTablaActuadoresBetweenDate(fecha1, fecha2) {
 
 async function recogerTablaActuadoresByDatoAndDate(dato, fecha1, fecha2) {
   const datos = await fetch(`${SERVER}/actuador?datos=${dato}&fecha1=${fecha1}&fecha2=${fecha2}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+    
+  if (!datos.ok) {
+    throw `error${datos.status} ${datos.statusText}`;
+  }
+    
+  return await datos.json();
+}
+
+async function recogerTablaActuadoresByClassAndDate(clase, fecha1, fecha2) {
+  const datos = await fetch(`${SERVER}/actuador?clase=${clase}&fecha1=${fecha1}&fecha2=${fecha2}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+    
+  if (!datos.ok) {
+    throw `error${datos.status} ${datos.statusText}`;
+  }
+    
+  return await datos.json();
+}
+
+async function recogerTablaActuadoresByClassAndDatoAndBetweenDate(clase, dato, fecha1, fecha2) {
+  const datos = await fetch(`${SERVER}/actuador?clase=${clase}&datos=${dato}&fecha1=${fecha1}&fecha2=${fecha2}`, {
     method: 'GET',
     headers: {
       'content-type': 'application/json'

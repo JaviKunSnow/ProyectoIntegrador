@@ -13,5 +13,8 @@ if($recurso) {
     } else if($recurso[1] == 'actuador') {
         $controlador = new actuadorLogController();
         $controlador->controlar();
+    } else if($recurso[1] == 'arduino') {
+        $controlador = new arduinoController();
+        $controlador->controlar();
     }
 } 

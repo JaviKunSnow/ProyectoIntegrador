@@ -56,6 +56,15 @@ class sensoresController extends ControladorPadre {
 
                 // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
                 
+                } else if(isset($_GET["datos"]) && isset($_GET["clase"]) && count($_GET) == 2) {
+
+                    // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
+                    $sensores = sensoresDAO::findDatosById($_GET["datos"], $_GET["clase"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 3 y si no estan vacios los datos que recojemos.
+                
                 } else if(isset($_GET["datos"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y recojo los datos.
@@ -64,10 +73,18 @@ class sensoresController extends ControladorPadre {
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 
                 // aqui pregunto si la cuenta de valores del get es 4 y si no estan vacios los datos que recojemos.
-                } else if(isset($_GET["datos"]) && isset($_GET["id"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
+                } else if(isset($_GET["clase"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 3) {
+
+                    // llamo al dao de datosSensorById para buscar los datos del sensor entre 2 fechas y la id del arduino.
+                    $sensores = sensoresDAO::findDatosSensorById($_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $data = json_encode($sensores);
+                    self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
+
+                // aqui pregunto si la cuenta de valores del get es 4 y si no estan vacios los datos que recojemos.
+                } else if(isset($_GET["datos"]) && isset($_GET["clase"]) && isset($_GET["fecha1"]) && isset($_GET["fecha2"]) && count($_GET) == 4) {
 
                     // llamo al dao de datosSensor para buscar los datos del sensor entre 2 fechas y por la id del arduino y recojo los datos.
-                    $sensores = sensoresDAO::findDatosSensorbyIdArduino($_GET["datos"], $_GET["id"], $_GET["fecha1"], $_GET["fecha2"]);
+                    $sensores = sensoresDAO::findDatosSensorbyIdAndDate($_GET["datos"], $_GET["clase"], $_GET["fecha1"], $_GET["fecha2"]);
                     $data = json_encode($sensores);
                     self::respuesta($data, array('Content-Type: application/json', 'HTTP/1.1 200 OK'));
 

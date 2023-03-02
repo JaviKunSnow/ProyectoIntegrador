@@ -7,6 +7,7 @@ require_once './config/conexion.php';
 require_once './controller/controladorPadre.php';
 require_once './controller/sensoresController.php';
 require_once './controller/actuadorLogController.php';
+require_once './controller/arduinoController.php';
 
 // modelo DAO y clases
 require_once './dao/DAO.php';
