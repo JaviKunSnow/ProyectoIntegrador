@@ -17,22 +17,26 @@ require_once './dao/usuarioDAO.php';
 $controladores = array(
     'login' => './controller/loginController.php',
     'user' => './controller/userController.php',
-    'admin' => './controller/adminController.php'
+    'admin' => './controller/adminController.php',
+    'adminAula' => './controller/adminAulaController.php'
 );
 
 
 // vistas
 $vistas = array(
-    'login' => './view/loginView.php',
-    'user' => './view/userView.php',
-    'admin' => './view/adminView.php'
+    'login' => './view/login.php',
+    'userAula' => './view/userAula.php',
+    'userDetalles' => './view/userDetalles.php',
+    'adminPlantas' => './view/adminPlantas.php',
+    'adminAulas' => './view/adminAulas.php',
+    'adminAula' => './view/adminAula.php',
+    'adminDetalles' => './view/adminDetalles.php'
 );
 
 // estilos
 $css = array(
     'login' => 'web/css/loginStyle.css',
     'admin' => 'web/css/adminStyle.css',
-    'user' => 'web/css/userStyle.css'
+    'user' => 'web/css/userStyle.css',
+    'detalles' => 'web/css/detallesStyle.css'
 );
-
-?>

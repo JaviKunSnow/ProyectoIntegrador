@@ -1,0 +1,10 @@
+td,
+th {
+    text-align: center;
+}
+
+ul.datos li{
+    text-align: left;
+    margin-left: 110px;
+}
+

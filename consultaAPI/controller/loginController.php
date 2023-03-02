@@ -16,11 +16,11 @@ if(isset($_REQUEST["enviar"])) {
                 $_SESSION['user'] = $user;
                 $_SESSION['rol'] = $usuario->rol;
                 if(estaValidado() && esAdmin()) {
-                    $_SESSION['vista'] = $vistas['admin'];
+                    $_SESSION['vista'] = $vistas['adminPlantas'];
                     $_SESSION['controlador'] = $controladores['admin'];
                     $_SESSION['css'] = $css['admin'];
                 } else {
-                    $_SESSION['vista'] = $vistas['user'];
+                    $_SESSION['vista'] = $vistas['userAula'];
                     $_SESSION['controlador'] = $controladores['user'];
                     $_SESSION['css'] = $css['user'];
                 }
@@ -30,6 +30,3 @@ if(isset($_REQUEST["enviar"])) {
         }
     }
 }
-
-
-?>

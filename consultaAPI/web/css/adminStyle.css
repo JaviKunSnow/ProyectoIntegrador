@@ -3,7 +3,7 @@ a {
 }
 
 .usuario {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .circle {
@@ -16,7 +16,13 @@ a {
     transform: scale(1.1);
 }
 
-.distorted {
+.circleAulas {
+    width: 350px;
+    height: 350px;
+}
+
+.distorted,
+.distortedAulas {
     border: 4px dashed #6c6c6b;
     display: inline-flex;
     justify-content: center;
@@ -26,7 +32,13 @@ a {
     border-radius: 50%;
 }
 
-.btn-circle {
+.distortedAulas {
+    border: 4px dashed #3b705d;
+    width: 300px;
+    height: 300px;
+}
+
+.botonPlantas {
     background-color: #ced4db;
     border: 3px solid #6c6c6b;
     width: 180px;
@@ -37,9 +49,25 @@ a {
     align-items: center;
 }
 
-.btn-circle:hover {
+.botonPlantas:hover {
     background-color: #6c6c6b;
     color: white;
+}
+
+.botonAulas {
+    background-color: #4e9078;
+    border: 3px solid #3b705d;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.botonAulas:hover {
+    background-color: #3b705d;
 }
 
 h4,
@@ -53,4 +81,9 @@ h3 {
     margin-bottom: 50px;
     font-family: 'Orbitron', serif;
     color: #3b705d;
+}
+
+.bi-arrow-left-circle path,
+.bi-arrow-right-circle path {
+    fill: #3b705d;
 }

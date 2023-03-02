@@ -8,9 +8,7 @@ main {
     margin-bottom: 70px;
 }
 
-
 header {
-    /* border-bottom: 2px #3b705d solid; */
     background-color: #3b705d;
     display: flex;
     justify-content: space-between;
@@ -30,9 +28,68 @@ header {
 .boton {
     font-family: 'Tumbly', serif;
     text-align: right;
+
+}
+
+.navegador {
+    margin-top: 5px;
+    padding-left: 10px;
+    background-color: #adadad;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+    --bs-breadcrumb-divider: '>';
+}
+
+.bread {
+    color: #4b4b4b;
+    text-decoration: none;
+}
+
+.breadcrumb-item {
+    font-size: 16px;
+    color: #555;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item button {
+    color: #555;
+}
+
+.breadcrumb-item.active {
+    color: #858585;
+}
+
+.btn-link {
+    font-size: 16px;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.btn-link:hover {
+    color: #858585;
+    text-decoration: none;
+}
+
+.ultimo {
+    text-decoration: none
+}
+
+.buscador {
+    background-color: #3b705d;
+    border: 0;
+
+}
+
+.buscador:hover {
+    background-color: #4e9078;
+    border: 1px solid #3b705d;
 }
 
 footer>div {
     background-color: #4e9078;
     color: white;
+    font-size: 11px;
 }
