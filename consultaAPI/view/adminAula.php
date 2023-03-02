@@ -53,7 +53,7 @@
         </div>
         <div class="carousel-item">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="humedadSpan">100%</span>
+                <span class="my-2" id="humedadSpan">10%</span>
                 <div class="distortedHum">
                     <button type="submit" class="btn btn-circle" id="humedad">
                         <img src="./multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
