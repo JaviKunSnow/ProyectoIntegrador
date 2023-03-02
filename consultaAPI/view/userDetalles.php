@@ -18,41 +18,44 @@
                     <!-- aqui podemos poner en que mes nos encontramos o algo  -->
                     <h2>Enero</h2>
                     <div class="ms-auto">
-                        <select class="form-select">
-                            <option value="0">-</option>
-                            <option value="1">Temperatura</option>
-                            <option value="2">Humedad</option>
-                            <option value="3">Luminosidad</option>
-                            <option value="4">Personas</option>
+                        <select class="form-select" id="boton">
+                            <option value="semana">Ultima semana</option>
+                            <option value="mes">Ultimo mes</option>
                         </select>
                     </div>
                 </div>
             </form>
             <!-- gráficos -->
-
+            <canvas id="grafico"></canvas>
         </div>
         <div class="tab-pane fade" id="tabla1" role="tabpanel" aria-labelledby="tabla1-tab">
             <!-- Filtro de busqueda -->
-            <form class="my-4">
+            <form class="my-4" id="form">
+                <input type="hidden" name="buscador" id="idClase" value="<?echo $_SESSION['idAula']?>">
+                <input type="hidden" name="buscador" id="buscador" value="">
                 <div class="row">
                     <div class="col-md-4">
                         <label for="select" class="form-label">Seleccione dato específico</label>
-                        <select class="form-select" id="select" name="select">
-                            <option value="0">-</option>
-                            <option value="1">Temperatura</option>
-                            <option value="2">Humedad</option>
-                            <option value="3">Luminosidad</option>
-                            <option value="4">Personas</option>
+                        <select class="form-select" id="selector" name="selector">
+                            <option value="Todos">Todos</option>
+                            <option value="temperatura">Temperatura</option>
+                            <option value="humedad">Humedad</option>
+                            <option value="luminosidad">Luminosidad</option>
+                            <option value="personas">Personas</option>
                         </select>
                     </div>
                     <div class="col-md-4">
                         <label for="input-fecha1" class="form-label">Fecha y hora inicial</label>
-                        <input type="datetime-local" class="form-control" id="input-fecha1" name="input-fecha1">
+                        <input type="datetime-local" class="form-control" id="fecha1" name="fecha1">
                     </div>
                     <div class="col-md-4">
                         <label for="input-fecha2" class="form-label">Fecha y hora final</label>
-                        <input type="datetime-local" class="form-control" id="input-fecha2" name="input-fecha2">
+                        <input type="datetime-local" class="form-control" id="fecha2" name="fecha2">
                     </div>
+                    <div class="col-md-4">
+                        <input type="submit" id="enviar" value="filtrar">
+                    </div>
+                    
                 </div>
             </form>
             <!-- tabla de sensores -->
@@ -60,18 +63,13 @@
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
-                            <tr>
-                                <th class="d-none d-md-table-cell">ID</th>
-                                <th>Fecha</th>
-                                <th class="d-none d-sm-table-cell d-md-table-cell">Temperatura</th>
-                                <th class="d-none d-md-table-cell">Humedad</th>
-                                <th class="d-none d-md-table-cell">Luminosidad</th>
-                                <th class="d-none d-md-table-cell">Personas</th>
+                            <tr id="headTablaSen">
+                              
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="cuerpoTablaSen">
                             <tr>
-                                <td class="d-none d-md-table-cell w-auto">1</td>
+                                
                                 <td class="d-block d-md-none w-auto">
                                     <a href="#submenuSensores1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -86,33 +84,6 @@
                                         <li>Personas: 5</li>
                                     </ul>
                                 </td>
-                                <td class="d-none d-md-table-cell w-auto">01/03/2023 02:55:12</td>
-                                <td class="d-none d-sm-table-cell d-md-table-cell w-auto">25º</td>
-                                <td class="d-none d-md-table-cell w-auto">10%</td>
-                                <td class="d-none d-md-table-cell w-auto">200</td>
-                                <td class="d-none d-md-table-cell w-auto">5</td>
-                            </tr>
-                            <tr>
-                                <td class="d-none d-md-table-cell w-auto">1</td>
-                                <td class="d-block d-md-none w-auto">
-                                    <a href="#submenuSensores2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                        </svg>
-                                        <span class="ms-1 d-block d-md-none d-sm-inline">01/03/2023 02:55:12</span> </a>
-                                    <ul class="datos collapse nav flex-column ms-1 mx-auto" id="submenuSensores2" data-bs-parent="#menu">
-                                        <li class="d-block d-sm-none d-md-none">Temperatura: 25º</li>
-                                        <li>Humedad: 10%</li>
-                                        <li>Luminosidad: 200</li>
-                                        <li>Personas: 5</li>
-                                    </ul>
-                                </td>
-                                <td class="d-none d-md-table-cell w-auto">01/03/2023 02:55:12</td>
-                                <td class="d-none d-sm-table-cell d-md-table-cell w-auto">25º</td>
-                                <td class="d-none d-md-table-cell w-auto">10%</td>
-                                <td class="d-none d-md-table-cell w-auto">200</td>
-                                <td class="d-none d-md-table-cell w-auto">5</td>
                             </tr>
                         </tbody>
                     </table>
@@ -121,26 +92,31 @@
         </div>
         <div class="tab-pane fade" id="tabla2" role="tabpanel" aria-labelledby="tabla2-tab">
             <!-- Filtro de busqueda -->
-            <form class="my-4">
+            <form class="my-4" id="form">
+                <input type="hidden" name="buscador" id="buscador2" value="">
                 <div class="row">
                     <div class="col-md-4">
                         <label for="select" class="form-label">Seleccione dato específico</label>
-                        <select class="form-select" id="select" name="select">
-                            <option value="0">-</option>
-                            <option value="1">Temperatura</option>
-                            <option value="2">Humedad</option>
-                            <option value="3">Luminosidad</option>
-                            <option value="4">Personas</option>
+                        <select class="form-select" id="selector2" name="selector2">
+                            <option value="Todos">Todos</option>
+                            <option value="calefaccion">Calefacción</option>
+                            <option value="ventilador">Ventilador</option>
+                            <option value="luces">Iluminación</option>
+                            <option value="ventanas">Ventanas</option>
                         </select>
                     </div>
                     <div class="col-md-4">
                         <label for="input-fecha1" class="form-label">Fecha y hora inicial</label>
-                        <input type="datetime-local" class="form-control" id="input-fecha1" name="input-fecha1">
+                        <input type="datetime-local" class="form-control" id="fecha1" name="fecha1">
                     </div>
                     <div class="col-md-4">
                         <label for="input-fecha2" class="form-label">Fecha y hora final</label>
-                        <input type="datetime-local" class="form-control" id="input-fecha2" name="input-fecha2">
+                        <input type="datetime-local" class="form-control" id="fecha2" name="fecha2">
                     </div>
+                    <div class="col-md-4">
+                        <input type="submit" id="enviar" value="filtrar">
+                    </div>
+                    
                 </div>
             </form>
             <!-- tabla de actuadores -->
@@ -148,17 +124,12 @@
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
-                            <tr>
-                                <th class="d-none d-md-table-cell">ID</th>
-                                <th>Fecha</th>
-                                <th class="d-none d-md-table-cell">Actuador</th>
-                                <th class="d-none d-md-table-cell">Causa</th>
-                                <th class="d-none d-sm-table-cell d-md-table-cell">Arduino</th>
+                            <tr id="headTablaAct">
+                                
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="cuerpoTablaAct">
                             <tr>
-                                <td class="d-none d-md-table-cell w-auto">1</td>
                                 <td class="d-block d-md-none w-auto">
                                     <a href="#submenuActuadores1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -173,32 +144,6 @@
                                         <li class="d-block d-sm-none d-md-none">Arduino: 2</li>
                                     </ul>
                                 </td>
-                                <td class="d-none d-md-table-cell w-auto">01/03/2023 02:55:12</td>
-                                <td class="d-none d-md-table-cell w-auto">Ventilador</td>
-                                <td class="d-none d-md-table-cell w-auto">Demasiado calor</td>
-                                <td class="d-none d-sm-table-cell d-md-table-cell w-auto">2</td>
-                            </tr>
-                            <tr>
-                                <td class="d-none d-md-table-cell w-auto">1</td>
-                                <td class="d-block d-md-none w-auto">
-                                    <a href="#submenuActuadores2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                        </svg>
-                                        <span class="ms-1 d-block d-md-none d-sm-inline">01/03/2023 02:55:12</span>
-                                    </a>
-                                    <ul class="datos collapse nav flex-column ms-1 mx-auto" id="submenuActuadores2" data-bs-parent="#menu">
-                                        <li>Actuador: Ventilador</li>
-                                        <li>Causa: Demasiado calor</li>
-                                        <li class="d-block d-sm-none d-md-none">Arduino: 2</li>
-                                    </ul>
-                                </td>
-                                <td class="d-none d-md-table-cell w-auto">01/03/2023 02:55:12</td>
-                                <td class="d-none d-md-table-cell w-auto">Ventilador</td>
-                                <td class="d-none d-md-table-cell w-auto">Demasiado calor</td>
-                                <td class="d-none d-sm-table-cell d-md-table-cell w-auto">2</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -207,3 +152,9 @@
         </div>
     </div>
 </div>
+
+<script src="web/js/grafico.js"></script>
+<script src="web/js/tablaSensores.js"></script>
+<script src="web/js/tablaActuadores.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

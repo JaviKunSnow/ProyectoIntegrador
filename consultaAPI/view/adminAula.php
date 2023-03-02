@@ -6,7 +6,7 @@
 <div class="usuario d-none d-sm-none d-md-block d-lg-block">
     <div class="d-flex row justify-content-center align-items-center mx-0">
         <div class="circle d-flex flex-column align-items-center col-md-4">
-            <span class="my-2" id="temperaturaSpan">25 º</span>
+            <span class="my-2" id="temperaturaSpan"><?echo $valores['temperatura']?>º</span>
             <div class="distortedTemp">
                 <button type="submit" class="btn btn-circle" id="temperatura">
                     <img src="web/multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="circle d-flex flex-column align-items-center col-md-4">
-            <span class="my-2" id="humedadSpan">100%</span>
+            <span class="my-2" id="humedadSpan"><?echo $valores['humedad']?>%</span>
             <div class="distortedHum">
                 <button type="submit" class="btn btn-circle" id="humedad">
                     <img src="web/multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="circle d-flex flex-column align-items-center col-md-4">
-            <span class="my-2" id="personasSpan">10</span>
+            <span class="my-2" id="personasSpan"><?echo $valores['personas']?></span>
             <div class="distortedPer">
                 <button type="submit" class="btn btn-circle" id="personas">
                     <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
@@ -43,7 +43,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="temperaturaSpan">25 º</span>
+                <span class="my-2" id="temperaturaSpan"><?echo $valores['temperatura']?>º</span>
                 <div class="distortedTemp">
                     <button type="submit" class="btn btn-circle" id="temperatura">
                         <img src="web/multimedia/sensores/temp.png" alt="tempIcon" class="sensorIcon">
@@ -53,7 +53,7 @@
         </div>
         <div class="carousel-item">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="humedadSpan">10%</span>
+                <span class="my-2" id="humedadSpan"><?echo $valores['humedad']?>%</span>
                 <div class="distortedHum">
                     <button type="submit" class="btn btn-circle" id="humedad">
                         <img src="web/multimedia/sensores/hum.png" alt="humIcon" class="sensorIcon">
@@ -63,7 +63,7 @@
         </div>
         <div class="carousel-item">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <span class="my-2" id="personasSpan">10</span>
+                <span class="my-2" id="personasSpan"><?echo $valores['personas']?></span>
                 <div class="distortedPer">
                     <button type="submit" class="btn btn-circle" id="personas">
                         <!-- dependiendo de las personas que se encuentren en el aula cambiara  -->
