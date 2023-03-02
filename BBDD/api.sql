@@ -38,6 +38,11 @@ CREATE TABLE `actuador_log` (
 insert into arduino (idArduino, nombre) values (1, 522);
 insert into arduino (idArduino, nombre) values (2, 523);
 insert into arduino (idArduino, nombre) values (3, 524);
+insert into arduino (idArduino, nombre) values (4, 525);
+insert into arduino (idArduino, nombre) values (5, 526);
+insert into arduino (idArduino, nombre) values (6, 527);
+insert into arduino (idArduino, nombre) values (7, 528);
+
 
 ALTER TABLE sensores AUTO_INCREMENT = 1;
 ALTER TABLE actuador_log AUTO_INCREMENT = 1;

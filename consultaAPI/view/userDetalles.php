@@ -16,7 +16,7 @@
             <form class="my-4">
                 <div class="d-flex align-items-center">
                     <!-- aqui podemos poner en que mes nos encontramos o algo  -->
-                    <h2>Ener</h2>
+                    <h2>Enero</h2>
                     <div class="ms-auto">
                         <select class="form-select">
                             <option value="0">-</option>
