@@ -1,18 +1,13 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/detallesStyle.css">
-<link rel="stylesheet" href="css/tipografia.css">
-
 <div class="container mt-4">
     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="grafico-tab" data-bs-toggle="tab" data-bs-target="#grafico" type="button" role="tab" aria-controls="grafico" aria-selected="true">Gráfico</button>
+            <button type="submit" class="nav-link active" id="grafico-tab" data-bs-toggle="tab" data-bs-target="#grafico" role="tab" aria-controls="grafico" aria-selected="true">Gráfico</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tabla1-tab" data-bs-toggle="tab" data-bs-target="#tabla1" type="button" role="tab" aria-controls="tabla1" aria-selected="false">Sensores</button>
+            <button type="submit" class="nav-link" id="tabla1-tab" data-bs-toggle="tab" data-bs-target="#tabla1" role="tab" aria-controls="tabla1" aria-selected="false">Sensores</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tabla2-tab" data-bs-toggle="tab" data-bs-target="#tabla2" type="button" role="tab" aria-controls="tabla2" aria-selected="false">Actuadores</button>
+            <button type="submit" class="nav-link" id="tabla2-tab" data-bs-toggle="tab" data-bs-target="#tabla2" role="tab" aria-controls="tabla2" aria-selected="false">Actuadores</button>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">

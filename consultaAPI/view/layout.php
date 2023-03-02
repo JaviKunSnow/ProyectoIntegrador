@@ -43,16 +43,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ol class="breadcrumb flex-wrap navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="breadcrumb-item">
-                            <button class="bread btn btn-link">Plantas</button>
+                            <button type="submit" class="bread btn btn-link">Plantas</button>
                         </li>
                         <li class="breadcrumb-item">
-                            <button class="bread btn btn-link">Aulas</button>
+                            <button type="submit" class="bread btn btn-link">Aulas</button>
                         </li>
                         <li class="breadcrumb-item">
-                            <button class="bread btn btn-link">Aula 522</button>
+                            <button type="submit" class="bread btn btn-link">Aula 522</button>
                         </li>
                         <li class="breadcrumb-item active">
-                            <button class="ultimo btn btn-link text-dark" disabled>Detalles</button>
+                            <button type="submit" class="ultimo btn btn-link text-dark" disabled>Detalles</button>
                         </li>
                     </ol>
                     <!-- Este buscador solo aparece cuando el admin se encuentra en la seccion de AULAS -->
