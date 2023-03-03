@@ -38,35 +38,47 @@
 
     <main class="sticky-top">
         <!-- aparece a partir de tener iniciada la sesion -->
-        <nav class="navegador navbar navbar-expand ">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ol class="breadcrumb flex-wrap navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="breadcrumb-item">
-                            <button type="submit" class="bread btn btn-link">Plantas</button>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <button type="submit" class="bread btn btn-link">Aulas</button>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <button type="submit" class="bread btn btn-link">Aula 522</button>
-                        </li>
-                        <li class="breadcrumb-item active">
-                            <button type="submit" class="ultimo btn btn-link text-dark" disabled>Detalles</button>
-                        </li>
-                    </ol>
-                    <!-- Este buscador solo aparece cuando el admin se encuentra en la seccion de AULAS -->
-                    <form class="d-flex">
-                        <input class="buscadorI form-control form-control-sm " type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="buscador btn btn-secondary" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg>
-                        </button>
-                    </form>
+        <?
+        if (estaValidado()) { ?>
+            <nav class="navegador navbar navbar-expand ">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <form action="./index.php" method="post">
+                            <ol class="breadcrumb flex-wrap navbar-nav me-auto mb-2 mb-lg-0">
+                                <?
+                                foreach ($migas as $nombre => $url) {
+                                    if ($nombre !== $_SESSION['pagina']) { ?>
+                                        <li class="breadcrumb-item">
+                                            <button type="submit" class="bread btn btn-link" name="<?echo $nombre?>"><?echo $url?></button>
+                                        </li>
+                                    <?
+                                    } else {?>
+                                        <li class="breadcrumb-item">
+                                            <button type="submit" class="bread btn btn-link" name="<?echo $nombre?>" disabled><?echo $url?></button>
+                                        </li>
+                                    <?
+                                    }
+                                }
+                                ?>
+                            </ol>
+                        </form>
+                        <!-- Este buscador solo aparece cuando el admin se encuentra en la seccion de AULAS -->
+                        <!--<form class="d-flex">
+                            <input class="buscadorI form-control form-control-sm " type="search" placeholder="Buscar" aria-label="Buscar">
+                            <button class="buscador btn btn-secondary" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                            -->
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        <?
+        }
+        ?>
+
         <? require_once $_SESSION['vista'] ?>
     </main>
     <div class="container-fluid px-0 pt-1">
