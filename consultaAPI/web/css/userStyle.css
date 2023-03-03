@@ -130,7 +130,8 @@ span {
 
 /* texto humedad */
 #low3 {
-    color: #1d7eee;
+    color: #89baf1;
+
 }
 
 #medium3 {
@@ -138,12 +139,13 @@ span {
 }
 
 #high3 {
-    color: #89baf1;
+    color: #1d7eee;
+
 }
 
 /* borde humedad */
 .low2 {
-    border: 4px dashed #1d7eee;
+    border: 4px dashed #89baf1;
 }
 
 .medium2 {
@@ -151,16 +153,18 @@ span {
 }
 
 .high2 {
-    border: 4px dashed #89baf1;
+    border: 4px dashed #1d7eee;
 }
 
 /* background humedad */
 #low {
-    background-color: #1d7eee;
+    background-color: #89baf1;
+
 }
 
 #low:hover {
-    background-color: #378cec;
+    background-color: #a4c6ee;
+
 }
 
 #medium {
@@ -172,11 +176,13 @@ span {
 }
 
 #high {
-    background-color: #89baf1;
+    background-color: #1d7eee;
+
 }
 
 #high:hover {
-    background-color: #a4c6ee;
+    background-color: #378cec;
+
 }
 
 /* texto personas */

@@ -37,7 +37,7 @@
                 <input type="hidden" name="buscador" id="idClase" value="<? echo $_SESSION['idAula'] ?>">
                 <input type="hidden" name="buscador" id="buscador" value="">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label for="select" class="form-label">Seleccione dato específico</label>
                         <select class="form-select" id="selector" name="selector">
                             <option value="Todos">Todos</option>
@@ -47,16 +47,16 @@
                             <option value="personas">Personas</option>
                         </select>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label for="input-fecha1" class="form-label">Fecha y hora inicial</label>
                         <input type="datetime-local" class="form-control" id="fecha1" name="fecha1">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label for="input-fecha2" class="form-label">Fecha y hora final</label>
                         <input type="datetime-local" class="form-control" id="fecha2" name="fecha2">
                     </div>
-                    <div class="col-md-4">
-                        <input type="submit" id="enviar" value="filtrar">
+                    <div class="col-md-3 mt-4">
+                        <input type="submit" id="enviar" class="filtrar" value="filtrar">
                     </div>
 
                 </div>
@@ -98,7 +98,7 @@
             <form class="my-4" id="formAct">
                 <input type="hidden" name="buscador" id="buscadorAct" value="<? echo $_SESSION['nomClase']?>">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label for="select" class="form-label">Seleccione dato específico</label>
                         <select class="form-select" id="selector2" name="selector2">
                             <option value="Todos">Todos</option>
@@ -108,16 +108,16 @@
                             <option value="ventanas">Ventanas</option>
                         </select>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label for="input-fecha1" class="form-label">Fecha y hora inicial</label>
                         <input type="datetime-local" class="form-control" id="fecha1Act" name="fecha1Act">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label for="input-fecha2" class="form-label">Fecha y hora final</label>
                         <input type="datetime-local" class="form-control" id="fecha2Act" name="fecha2Act">
                     </div>
-                    <div class="col-md-4">
-                        <input type="submit" id="enviar" value="filtrar">
+                    <div class="col-md-3 mt-4">
+                        <input type="submit" id="enviar" class="filtrar" value="filtrar">
                     </div>
 
                 </div>

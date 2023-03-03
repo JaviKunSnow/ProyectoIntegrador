@@ -7,3 +7,17 @@ ul.datos li {
     text-align: left;
     margin-left: 110px;
 }
+
+
+.filtrar {
+    background-color: #3b705d;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 0;
+    color: white;
+}
+
+.filtrar:hover {
+    background-color: #4e9078;
+    border: 1px solid #3b705d;
+}

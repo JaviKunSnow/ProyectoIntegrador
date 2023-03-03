@@ -1,4 +1,4 @@
-const SERVER = `http://192.168.1.110/ProyectoIntegrador/API/api.php`;
+const SERVER = `http://192.168.2.206/ProyectoIntegrador/API/api.php`;
 
 const headTablaSen = document.getElementById("headTablaSen");
 const cuerpoTablaSen = document.getElementById("cuerpoTablaSen");

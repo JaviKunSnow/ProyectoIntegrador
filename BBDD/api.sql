@@ -107,7 +107,8 @@ insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArdu
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-02-28 08:00:15', 46.4, 15.5, 700, 20, 1);
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-03-01 08:00:15', 46.4, 15.5, 700, 20, 1);
 insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-03-02 08:00:15', 46.4, 15.5, 700, 20, 1);
-
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-03-02 08:00:15', 70.4, 5.5, 800, 12, 2);
+insert into sensores (fecha, humedad, temperatura, luminosidad, personas, idArduino) values ('2023-03-02 08:00:15', 10.4, 25.5, 800, 15, 3);
 
 
 insert into actuador_log(fecha, actuador, causa, idArduino) values ('2023-02-28 08:00:15', 'ventilador', 'el tiempo', 1);

@@ -1,4 +1,4 @@
-<h2 class="text-center my-4">Aula 165</h2>
+<h2 class="text-center my-4">Aula 523</h2>
 <!-- Aqui aparecerá la fecha de hoy -->
 <h4 class="text-center"><? echo date('Y-m-d') ?></h4>
 
